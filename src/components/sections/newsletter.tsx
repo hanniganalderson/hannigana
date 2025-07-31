@@ -56,7 +56,7 @@ export function Newsletter() {
   return (
     <section className="flex flex-col gap-4 text-left pt-8">
       <h2 className="font-medium">
-        Join -4 readers to stay up to date on future episodes & insight. No value, just spam.
+        Join -4 readers on future episodes & insight. No value, just spam.
       </h2>
       <Form {...form}>
         <form
