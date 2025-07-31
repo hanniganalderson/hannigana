@@ -27,11 +27,26 @@ export async function submitEmail(
   try {
     const resend = new Resend('re_hV3qA8Y7_A1MxjVugWBMGV6CKWEhUHv2z');
     
+    // Send notification email to you
     await resend.emails.send({
-      from: 'onboarding@resend.dev',
+      from: 'Acme <onboarding@resend.dev>',
       to: 'hi@hannigana.com',
       subject: 'New Newsletter Subscription',
       html: `<p>New subscription from: <strong>${validation.data.email}</strong></p>`
+    });
+
+    // Send thank you email to the subscriber
+    await resend.emails.send({
+      from: 'Acme <onboarding@resend.dev>',
+      to: validation.data.email,
+      subject: 'Welcome to Early Equity',
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #333;">Welcome to Early Equity!</h2>
+          <p>Thanks for subscribing to my newsletter. You'll receive updates on future episodes and insights.</p>
+          <p>Best,<br>Hannigan</p>
+        </div>
+      `
     });
 
     console.log("New Email Subscription:", validation.data.email);
