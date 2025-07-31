@@ -1,25 +1,26 @@
 import Link from "next/link";
 
 const thoughtLinks = [
-  { name: "collective ideas", href: "#" },
-  { name: "my own ideas", href: "#" },
-  { name: "what i'm planning / working on", href: "#" },
+  { name: "collective ideas and content i enjoy", href: "/thoughts/collective-ideas" },
+  { name: "my own ideas", href: "/thoughts/my-ideas" },
+  { name: "what i'm planning / working on", href: "/thoughts/planning" },
 ];
 
 export function Thoughts() {
   return (
     <section className="flex flex-col text-left gap-2">
       <h2 className="text-sm font-medium text-muted-foreground">
-        jumbled thoughts on
+        Jumbled thoughts on
       </h2>
       <div className="flex flex-col items-start gap-1">
         {thoughtLinks.map((link) => (
           <Link
             key={link.name}
             href={link.href}
-            className="text-primary underline-offset-4 hover:underline transition-colors"
+            className="text-primary font-medium hover:text-primary/80 transition-colors duration-200 inline-flex items-center gap-1 group"
           >
             {link.name}
+            <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">→</span>
           </Link>
         ))}
       </div>

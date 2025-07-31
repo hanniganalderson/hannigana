@@ -9,9 +9,9 @@ export default function Home() {
     <div className="container mx-auto max-w-2xl px-4 py-12 md:py-20">
       <div className="flex flex-col gap-10">
         <Hero />
+        <Interests />
         <Socials />
         <Thoughts />
-        <Interests />
         <Newsletter />
       </div>
     </div>

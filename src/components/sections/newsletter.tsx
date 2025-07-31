@@ -34,7 +34,7 @@ export function Newsletter() {
       if (result.success) {
         toast({
           title: "Subscribed!",
-          description: "Thanks for joining. You're in good company.",
+          description: "Thanks for joining. I will only send you spam.",
         });
         form.reset();
       } else {
@@ -48,7 +48,7 @@ export function Newsletter() {
       toast({
         variant: "destructive",
         title: "Uh oh! Something went wrong.",
-        description: "There was a problem with your request. Please try again.",
+        description: "Try again.",
       });
     }
   }
@@ -56,7 +56,7 @@ export function Newsletter() {
   return (
     <section className="flex flex-col gap-4 text-left pt-8">
       <h2 className="font-medium">
-        Join -402 readers to stay up to date on future episodes & insight.
+        Join -4 readers to stay up to date on future episodes & insight.
       </h2>
       <Form {...form}>
         <form
