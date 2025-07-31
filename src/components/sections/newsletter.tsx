@@ -34,20 +34,20 @@ export function Newsletter() {
       if (result.success) {
         toast({
           title: "Subscribed!",
-          description: "Thanks for joining. I will only send you spam.",
+          description: "Thanks for joining.",
         });
         form.reset();
       } else {
         toast({
             variant: "destructive",
-            title: "Uh oh! Something went wrong.",
+            title: "Oh no",
             description: result.error,
         });
       }
     } catch (error) {
       toast({
         variant: "destructive",
-        title: "Uh oh! Something went wrong.",
+        title: "Oh no",
         description: "Try again.",
       });
     }
