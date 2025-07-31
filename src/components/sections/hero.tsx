@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { MapPin } from "lucide-react";
 
 export function Hero() {
   return (
@@ -17,8 +18,12 @@ export function Hero() {
         </h1>
         <p className="max-w-md text-muted-foreground">
           I'm a Computer Science student and podcast host. Early Equity is a collection of ideas from founders and
-          investors on early decision making.
+          investors on early decision making. This is an archive of what I want to remember & implement.
         </p>
+        <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+          <MapPin className="h-4 w-4" />
+          <span>Bend, OR</span>
+        </div>
       </div>
     </section>
   );

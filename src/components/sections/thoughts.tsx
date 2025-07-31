@@ -17,7 +17,7 @@ export function Thoughts() {
           <Link
             key={link.name}
             href={link.href}
-            className="text-primary font-medium hover:text-primary/80 transition-colors duration-200 inline-flex items-center gap-1 group"
+            className="text-primary font-medium hover:text-primary/80 transition-colors duration-200 inline-flex items-center gap-1 group px-2 py-1 rounded-md hover:bg-primary/5 border border-transparent hover:border-primary/20"
           >
             {link.name}
             <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">→</span>
