@@ -1,6 +1,7 @@
 "use server";
 
 import { z } from "zod";
+import { Resend } from "resend";
 import { emailSubscriptionSchema } from "./schemas";
 
 // Type for a standardized server action response
@@ -23,8 +24,20 @@ export async function submitEmail(
     return { success: false, error: "Invalid email provided." };
   }
 
-  console.log("New Email Subscription:", validation.data.email);
-  // Integrate with your email marketing service (e.g., Mailchimp, ConvertKit) here.
-  
-  return { success: true, data: { subscribed: true } };
+  try {
+    const resend = new Resend('re_hV3qA8Y7_A1MxjVugWBMGV6CKWEhUHv2z');
+    
+    await resend.emails.send({
+      from: 'onboarding@resend.dev',
+      to: 'hi@hannigana.com',
+      subject: 'New Newsletter Subscription',
+      html: `<p>New subscription from: <strong>${validation.data.email}</strong></p>`
+    });
+
+    console.log("New Email Subscription:", validation.data.email);
+    return { success: true, data: { subscribed: true } };
+  } catch (error) {
+    console.error("Failed to send email:", error);
+    return { success: false, error: "Failed to subscribe. Please try again." };
+  }
 }
