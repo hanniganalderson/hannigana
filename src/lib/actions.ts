@@ -29,7 +29,7 @@ export async function submitEmail(
     
     // Send notification email to you
     await resend.emails.send({
-      from: 'Acme <onboarding@resend.dev>',
+      from: 'Early Equity <onboarding@resend.dev>',
       to: 'hi@hannigana.com',
       subject: 'New Newsletter Subscription',
       html: `<p>New subscription from: <strong>${validation.data.email}</strong></p>`
@@ -37,13 +37,12 @@ export async function submitEmail(
 
     // Send thank you email to the subscriber
     await resend.emails.send({
-      from: 'Acme <onboarding@resend.dev>',
+      from: 'Hannigan Alderson <hi@hannigana.com>',
       to: validation.data.email,
-      subject: 'Welcome to Early Equity',
+      subject: 'Thanks for subscribing!',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #333;">Welcome to Early Equity!</h2>
-          <p>Thanks for subscribing to my newsletter. You'll receive updates on future episodes and insights.</p>
+          <p>Thanks for subscribing! You'll receive updates on future episodes and insights.</p>
           <p>Best,<br>Hannigan</p>
         </div>
       `
