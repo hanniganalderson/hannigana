@@ -2,6 +2,7 @@
 
 import { z } from "zod";
 import { Resend } from "resend";
+import { supabase } from "./supabase";
 import { emailSubscriptionSchema } from "./schemas";
 
 // Type for a standardized server action response
@@ -25,7 +26,7 @@ export async function submitEmail(
   }
 
   try {
-    const resend = new Resend('re_hV3qA8Y7_A1MxjVugWBMGV6CKWEhUHv2z');
+    const resend = new Resend(process.env.RESEND_API_KEY);
     
     // Send notification email to you
     await resend.emails.send({
@@ -47,6 +48,18 @@ export async function submitEmail(
         </div>
       `
     });
+
+    // Store email in Supabase
+    const { error: dbError } = await supabase
+      .from('newsletter_subscribers')
+      .insert([
+        { email: validation.data.email }
+      ]);
+
+    if (dbError) {
+      console.error("Failed to store email in database:", dbError);
+      // Still return success since email was sent
+    }
 
     console.log("New Email Subscription:", validation.data.email);
     return { success: true, data: { subscribed: true } };

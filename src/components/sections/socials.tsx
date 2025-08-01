@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 const socialLinks = [
-  { name: "early equity", href: "https://earlyequity.carrd.co" },
+  { name: "early equity", href: "/earlyequity" },
   { name: "listen on spotify", href: "https://open.spotify.com/show/7GJN0UTtuNgPENsu2qWw3Y?si=c8574ca78a694411" },
   { name: "my linkedin", href: "https://www.linkedin.com/in/hanniganalderson" },
 ];
