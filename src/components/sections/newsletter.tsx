@@ -54,14 +54,14 @@ export function Newsletter() {
   }
 
   return (
-    <section className="flex flex-col gap-4 text-left pt-8">
+    <section className="flex flex-col gap-4 text-center pt-8">
       <h2 className="font-medium">
         Join -4 readers on future episodes & insight. No value, just spam.
       </h2>
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="w-full max-w-sm"
+          className="w-full max-w-sm mx-auto"
         >
           <FormField
             control={form.control}
