@@ -5,7 +5,7 @@ export function Interests() {
   return (
     <section className="flex flex-col gap-6 text-left">
       <p>
-        I'm interested across entrepreneurship, investing in startups and
+        Interested in entrepreneurship, investing in startups and
         real estate, and improving my decision making.
       </p>
       <div className="pt-2">
