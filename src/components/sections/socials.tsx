@@ -2,9 +2,9 @@
 import Link from "next/link";
 
 const socialLinks = [
-  { name: "early equity", href: "/earlyequity" },
-  { name: "listen on spotify", href: "https://open.spotify.com/show/7GJN0UTtuNgPENsu2qWw3Y?si=c8574ca78a694411" },
-  { name: "my linkedin", href: "https://www.linkedin.com/in/hanniganalderson" },
+  { name: "early equity", href: "/earlyequity", internal: true },
+  { name: "listen on spotify", href: "https://open.spotify.com/show/7GJN0UTtuNgPENsu2qWw3Y?si=c8574ca78a694411", internal: false },
+  { name: "my linkedin", href: "https://www.linkedin.com/in/hanniganalderson", internal: false },
 ];
 
 export function Socials() {
@@ -16,8 +16,8 @@ export function Socials() {
           <Link
             key={link.name}
             href={link.href}
-            target="_blank"
-            rel="noopener noreferrer"
+            target={link.internal ? undefined : "_blank"}
+            rel={link.internal ? undefined : "noopener noreferrer"}
             className="text-primary font-medium hover:text-primary/80 transition-colors duration-200 inline-flex items-center gap-1 group px-2 py-1 rounded-md hover:bg-primary/5 border border-transparent hover:border-primary/20"
           >
             {link.name}

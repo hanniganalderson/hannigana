@@ -28,6 +28,13 @@ export async function submitEmail(
   try {
     const resend = new Resend(process.env.RESEND_API_KEY);
     
+    if (!process.env.RESEND_API_KEY) {
+      console.error("RESEND_API_KEY is not set");
+      return { success: false, error: "Email service not configured. Please try again." };
+    }
+    
+    // Temporarily comment out email sending to test Supabase
+    /*
     // Send notification email to you
     await resend.emails.send({
       from: 'Early Equity <onboarding@resend.dev>',
@@ -48,6 +55,7 @@ export async function submitEmail(
         </div>
       `
     });
+    */
 
     // Store email in Supabase
     const { error: dbError } = await supabase
@@ -65,6 +73,7 @@ export async function submitEmail(
     return { success: true, data: { subscribed: true } };
   } catch (error) {
     console.error("Failed to send email:", error);
+    console.error("Error details:", JSON.stringify(error, null, 2));
     return { success: false, error: "Failed to subscribe. Please try again." };
   }
 }

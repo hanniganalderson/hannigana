@@ -1,10 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Instagram, Podcast, Youtube, Linkedin, Music, Video } from "lucide-react";
+import { Instagram, Podcast, Youtube, Linkedin, Music, Video, ArrowLeft } from "lucide-react";
 
 export default function EarlyEquity() {
   return (
     <div className="container mx-auto max-w-2xl px-4 py-12 md:py-20">
+      {/* Go Back Button */}
+      <div className="mb-8">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors duration-200"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          <span>go back</span>
+        </Link>
+      </div>
+      
       <div className="flex flex-col items-center text-center gap-12 p-16 rounded-2xl bg-white border-2 border-transparent relative overflow-hidden">
         {/* Moving gradient border */}
         <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 animate-pulse"></div>
