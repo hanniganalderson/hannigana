@@ -33,8 +33,8 @@ export async function submitEmail(
       return { success: false, error: "Email service not configured. Please try again." };
     }
     
-    // Temporarily comment out email sending to test Supabase
-    /*
+   
+  
     // Send notification email to you
     await resend.emails.send({
       from: 'Early Equity <onboarding@resend.dev>',
@@ -55,9 +55,16 @@ export async function submitEmail(
         </div>
       `
     });
-    */
+  
 
     // Store email in Supabase
+    console.log("Attempting to store email in Supabase:", validation.data.email);
+    
+    if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+      console.error("Supabase environment variables not set");
+      return { success: false, error: "Database not configured. Please try again." };
+    }
+    
     const { error: dbError } = await supabase
       .from('newsletter_subscribers')
       .insert([
@@ -66,8 +73,11 @@ export async function submitEmail(
 
     if (dbError) {
       console.error("Failed to store email in database:", dbError);
-      // Still return success since email was sent
+      console.error("Supabase error details:", JSON.stringify(dbError, null, 2));
+      return { success: false, error: "Failed to store subscription. Please try again." };
     }
+    
+    console.log("Successfully stored email in Supabase");
 
     console.log("New Email Subscription:", validation.data.email);
     return { success: true, data: { subscribed: true } };
