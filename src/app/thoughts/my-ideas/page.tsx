@@ -28,47 +28,81 @@ export default function MyIdeas() {
         </div>
         
         <article className="space-y-6">
-          <div className="bg-gradient-to-br from-white to-gray-50 border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-all duration-300">
-            <button
-              onClick={() => setIsExpanded(!isExpanded)}
-              className="w-full flex items-center justify-between text-left group"
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
-                <h2 className="text-lg font-semibold text-gray-900 group-hover:text-purple-700 transition-colors duration-200">
-                  Graduating Debt Free
-                </h2>
-              </div>
+          <div className="group cursor-pointer" onClick={() => setIsExpanded(!isExpanded)}>
+            <div className="flex items-center justify-between py-3 px-4 border-b border-gray-100 hover:border-gray-200 transition-colors duration-200">
+              <h2 className="text-lg font-medium text-gray-900 group-hover:text-purple-700 transition-colors duration-200">
+                Graduating Debt Free
+              </h2>
               {isExpanded ? (
                 <ChevronDown className="w-4 h-4 text-purple-600 transition-transform duration-200" />
               ) : (
-                <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-purple-600 transition-transform duration-200" />
+                <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-purple-600 transition-transform duration-200" />
               )}
-            </button>
+            </div>
             
             {isExpanded && (
-              <div className="mt-4 pt-4 border-t border-gray-200 animate-in slide-in-from-top-2 duration-300">
-                <p className="text-gray-600 mb-6 leading-relaxed">
+              <div className="px-4 py-6 bg-gray-50/50 animate-in slide-in-from-top-2 duration-300">
+                <p className="text-gray-600 mb-6 leading-relaxed text-sm">
                   Here's a distilled blueprint I've used for how I'll graduate debt free — something I've put a lot of thought into.
                 </p>
                 
-                <div className="bg-white rounded-lg p-4 border border-gray-100 shadow-sm">
-                  <ol className="list-decimal list-inside space-y-3 text-gray-700">
-                    <li className="leading-relaxed">High school dual enrollment/APs</li>
-                    <li className="leading-relaxed">Community college: partial or full, online or in person, it is an immense saving opportunity.</li>
-                    <li className="leading-relaxed">Be aware of all possible grants</li>
-                    <li className="leading-relaxed">Scholarships — emphasis on local, express clear pain point and how the scholarship will directly benefit you</li>
-                    <li className="leading-relaxed">Living with family</li>
-                    <li className="leading-relaxed">Taking annoying prerequisites online to free up time to work more</li>
-                    <li className="leading-relaxed">Work at a job that is not mentally taxing or demanding</li>
-                    <li className="leading-relaxed">Internships and/or summer school to graduate on time/early</li>
-                    <li className="leading-relaxed">Dependency status — improve aid</li>
-                    <li className="leading-relaxed">Correctly plan for classes ahead of time, only take what you need</li>
-                    <li className="leading-relaxed">General frugality, applicable to all of life</li>
-                    <li className="leading-relaxed">For loans you're not actively using, keep in HYSA. Ideally only take subsidized loans out.</li>
-                    <li className="leading-relaxed">Get the $2k AOTC tax credit every year you're eligible.</li>
-                    <li className="leading-relaxed">Leverage AI for course planning & financial aid discovery. Generate the right prompt and it will be beyond easy.</li>
-                  </ol>
+                <div className="space-y-3 text-gray-700 text-sm">
+                  <div className="flex items-start gap-3">
+                    <span className="text-purple-600 font-medium text-xs mt-1">01</span>
+                    <span className="leading-relaxed">High school dual enrollment/APs</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-purple-600 font-medium text-xs mt-1">02</span>
+                    <span className="leading-relaxed">Community college: partial or full, online or in person, it is an immense saving opportunity.</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-purple-600 font-medium text-xs mt-1">03</span>
+                    <span className="leading-relaxed">Be aware of all possible grants</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-purple-600 font-medium text-xs mt-1">04</span>
+                    <span className="leading-relaxed">Scholarships — emphasis on local, express clear pain point and how the scholarship will directly benefit you</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-purple-600 font-medium text-xs mt-1">05</span>
+                    <span className="leading-relaxed">Living with family</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-purple-600 font-medium text-xs mt-1">06</span>
+                    <span className="leading-relaxed">Taking annoying prerequisites online to free up time to work more</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-purple-600 font-medium text-xs mt-1">07</span>
+                    <span className="leading-relaxed">Work at a job that is not mentally taxing or demanding</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-purple-600 font-medium text-xs mt-1">08</span>
+                    <span className="leading-relaxed">Internships and/or summer school to graduate on time/early</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-purple-600 font-medium text-xs mt-1">09</span>
+                    <span className="leading-relaxed">Dependency status — improve aid</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-purple-600 font-medium text-xs mt-1">10</span>
+                    <span className="leading-relaxed">Correctly plan for classes ahead of time, only take what you need</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-purple-600 font-medium text-xs mt-1">11</span>
+                    <span className="leading-relaxed">General frugality, applicable to all of life</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-purple-600 font-medium text-xs mt-1">12</span>
+                    <span className="leading-relaxed">For loans you're not actively using, keep in HYSA. Ideally only take subsidized loans out.</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-purple-600 font-medium text-xs mt-1">13</span>
+                    <span className="leading-relaxed">Get the $2k AOTC tax credit every year you're eligible.</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-purple-600 font-medium text-xs mt-1">14</span>
+                    <span className="leading-relaxed">Leverage AI for course planning & financial aid discovery. Generate the right prompt and it will be beyond easy.</span>
+                  </div>
                 </div>
               </div>
             )}
