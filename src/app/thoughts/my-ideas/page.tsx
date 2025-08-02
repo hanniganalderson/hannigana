@@ -1,7 +1,11 @@
+"use client";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ChevronDown, ChevronRight } from "lucide-react";
+import { useState } from "react";
 
 export default function MyIdeas() {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <div className="container mx-auto max-w-2xl px-4 py-12 md:py-20">
       {/* Go Back Button */}
@@ -15,13 +19,61 @@ export default function MyIdeas() {
         </Link>
       </div>
       
-      <div className="flex flex-col gap-6">
-        <h1 className="text-3xl font-serif font-bold tracking-tight">
-          my own ideas
-        </h1>
-        <p className="text-muted-foreground">
-          I don't have any yet.
-        </p>
+      <div className="flex flex-col gap-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-serif font-bold tracking-tight text-gray-900 mb-2">
+            my own ideas
+          </h1>
+          <div className="w-16 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+        </div>
+        
+        <article className="space-y-6">
+          <div className="bg-gradient-to-br from-white to-gray-50 border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-all duration-300">
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="w-full flex items-center justify-between text-left group"
+            >
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
+                <h2 className="text-lg font-semibold text-gray-900 group-hover:text-purple-700 transition-colors duration-200">
+                  Graduating Debt Free
+                </h2>
+              </div>
+              {isExpanded ? (
+                <ChevronDown className="w-4 h-4 text-purple-600 transition-transform duration-200" />
+              ) : (
+                <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-purple-600 transition-transform duration-200" />
+              )}
+            </button>
+            
+            {isExpanded && (
+              <div className="mt-4 pt-4 border-t border-gray-200 animate-in slide-in-from-top-2 duration-300">
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  Here's a distilled blueprint I've used for how I'll graduate debt free — something I've put a lot of thought into.
+                </p>
+                
+                <div className="bg-white rounded-lg p-4 border border-gray-100 shadow-sm">
+                  <ol className="list-decimal list-inside space-y-3 text-gray-700">
+                    <li className="leading-relaxed">High school dual enrollment/APs</li>
+                    <li className="leading-relaxed">Community college: partial or full, online or in person, it is an immense saving opportunity.</li>
+                    <li className="leading-relaxed">Be aware of all possible grants</li>
+                    <li className="leading-relaxed">Scholarships — emphasis on local, express clear pain point and how the scholarship will directly benefit you</li>
+                    <li className="leading-relaxed">Living with family</li>
+                    <li className="leading-relaxed">Taking annoying prerequisites online to free up time to work more</li>
+                    <li className="leading-relaxed">Work at a job that is not mentally taxing or demanding</li>
+                    <li className="leading-relaxed">Internships and/or summer school to graduate on time/early</li>
+                    <li className="leading-relaxed">Dependency status — improve aid</li>
+                    <li className="leading-relaxed">Correctly plan for classes ahead of time, only take what you need</li>
+                    <li className="leading-relaxed">General frugality, applicable to all of life</li>
+                    <li className="leading-relaxed">For loans you're not actively using, keep in HYSA. Ideally only take subsidized loans out.</li>
+                    <li className="leading-relaxed">Get the $2k AOTC tax credit every year you're eligible.</li>
+                    <li className="leading-relaxed">Leverage AI for course planning & financial aid discovery. Generate the right prompt and it will be beyond easy.</li>
+                  </ol>
+                </div>
+              </div>
+            )}
+          </div>
+        </article>
       </div>
     </div>
   );
