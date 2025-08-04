@@ -11,6 +11,46 @@ const lora = Lora({ subsets: ["latin"], variable: "--font-lora" });
 export const metadata: Metadata = {
   title: "Hannigan Alderson",
   description: "Computer Science student, podcast host, and aspiring investor.",
+  keywords: ["Hannigan Alderson", "Computer Science", "Podcast Host", "Investor", "Entrepreneur", "SquidTalk", "Outliers"],
+  authors: [{ name: "Hannigan Alderson" }],
+  creator: "Hannigan Alderson",
+  publisher: "Hannigan Alderson",
+  robots: "index, follow",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://hannigana.com",
+    siteName: "Hannigan Alderson",
+    title: "Hannigan Alderson",
+    description: "Computer Science student, podcast host, and aspiring investor.",
+    images: [
+      {
+        url: "/profile.png",
+        width: 1200,
+        height: 630,
+        alt: "Hannigan Alderson - Computer Science student, podcast host, and aspiring investor",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@hannigana",
+    creator: "@hannigana",
+    title: "Hannigan Alderson",
+    description: "Computer Science student, podcast host, and aspiring investor.",
+    images: ["/profile.png"],
+  },
+  viewport: "width=device-width, initial-scale=1",
+  themeColor: "#000000",
+  manifest: "/manifest.json",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  other: {
+    "msapplication-TileColor": "#000000",
+    "msapplication-config": "/browserconfig.xml",
+  },
 };
 
 export default function RootLayout({
