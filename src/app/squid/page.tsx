@@ -634,18 +634,18 @@ export default function SquidPage() {
           </div>
 
           {/* Main Hero Content */}
-          <div className="relative container mx-auto px-8 py-48 md:py-64">
+          <div className="relative container mx-auto px-4 sm:px-8 py-24 md:py-48 lg:py-64">
             <div className="text-center max-w-6xl mx-auto">
               {/* Premium Badge */}
-              <div className="inline-flex items-center gap-3 px-6 py-3 bg-black/20 backdrop-blur-md border border-[#C7A963]/20 rounded-full mb-16 hover-outline">
-                <Sparkles className="w-4 h-4 text-[#C7A963]" />
-                <span className="text-sm font-light tracking-widest text-[#C7A963] uppercase">Strategic Network Intelligence</span>
+              <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 bg-black/20 backdrop-blur-md border border-[#C7A963]/20 rounded-full mb-8 sm:mb-16 hover-outline">
+                <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-[#C7A963]" />
+                <span className="text-xs sm:text-sm font-light tracking-widest text-[#C7A963] uppercase">Strategic Network Intelligence</span>
               </div>
 
               {/* Main Title */}
-              <h1 className="text-5xl md:text-7xl font-['Playfair_Display'] font-bold tracking-tight text-[#F5F5F5] mb-12 leading-[0.9]">
+              <h1 className="text-3xl sm:text-5xl md:text-7xl font-['Playfair_Display'] font-bold tracking-tight text-[#F5F5F5] mb-8 sm:mb-12 leading-[0.9]">
                 SquidTalk
-                <span className="text-[#C7A963] mx-6">↔</span>
+                <span className="text-[#C7A963] mx-2 sm:mx-6">↔</span>
                 Outliers
               </h1>
 
@@ -653,71 +653,61 @@ export default function SquidPage() {
               <div className="w-32 h-px bg-gradient-to-r from-transparent via-[#C7A963] to-transparent mx-auto mb-20"></div>
 
               {/* Subtitle */}
-              <p className="text-lg md:text-xl text-[#F5F5F5]/90 mb-24 leading-relaxed font-light tracking-wide max-w-4xl mx-auto">
-                Strategic pipeline connecting podcast guests with the 
-                <span className="text-[#C7A963] font-medium"> Outliers community</span>
+              <p className="text-base sm:text-lg md:text-xl text-[#F5F5F5]/70 font-light tracking-wide max-w-4xl mx-auto mb-8 sm:mb-12 leading-relaxed">
+                Strategic pipeline connecting podcast guests with the Outliers community
               </p>
 
               {/* Stats Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20">
-                <div className="group bg-black/20 backdrop-blur-md border border-[#F5F5F5]/10 rounded-2xl p-8 hover:border-[#C7A963]/30 transition-all duration-500 hover:scale-105 hover-outline">
-                  <div className="text-3xl font-['Playfair_Display'] font-bold text-[#C7A963] mb-2">12</div>
-                  <div className="text-sm text-[#F5F5F5]/70 font-light tracking-wide">Active Opportunities</div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 mb-12 sm:mb-16">
+                <div className="text-center">
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#C7A963] mb-2">57</div>
+                  <div className="text-xs sm:text-sm text-[#F5F5F5]/60 font-light">Podcast Episodes</div>
                 </div>
-                <div className="group bg-black/20 backdrop-blur-md border border-[#F5F5F5]/10 rounded-2xl p-8 hover:border-[#C7A963]/30 transition-all duration-500 hover:scale-105 hover-outline">
-                  <div className="text-3xl font-['Playfair_Display'] font-bold text-[#4A7C59] mb-2">6</div>
-                  <div className="text-sm text-[#F5F5F5]/70 font-light tracking-wide">Perfect Prospects</div>
+                <div className="text-center">
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#C7A963] mb-2">45</div>
+                  <div className="text-xs sm:text-sm text-[#F5F5F5]/60 font-light">Outliers Members</div>
                 </div>
-                <div className="group bg-black/20 backdrop-blur-md border border-[#F5F5F5]/10 rounded-2xl p-8 hover:border-[#C7A963]/30 transition-all duration-500 hover:scale-105 hover-outline">
-                  <div className="text-3xl font-['Playfair_Display'] font-bold text-[#B76E79] mb-2">5</div>
-                  <div className="text-sm text-[#F5F5F5]/70 font-light tracking-wide">Pipeline Guests</div>
+                <div className="text-center">
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#C7A963] mb-2">12</div>
+                  <div className="text-xs sm:text-sm text-[#F5F5F5]/60 font-light">Active Opportunities</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#C7A963] mb-2">8</div>
+                  <div className="text-xs sm:text-sm text-[#F5F5F5]/60 font-light">Strategic Intros</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Network Visualization */}
-        <div className="container mx-auto px-8 py-32">
-          <div className="bg-gradient-to-br from-black via-gray-900/20 to-black border border-[#F5F5F5]/10 rounded-3xl p-16 shadow-2xl hover-outline">
-            <h2 className="text-4xl font-['Playfair_Display'] font-bold text-[#F5F5F5] mb-16 text-center">Interactive Network Map</h2>
-            <div className="bg-black/40 backdrop-blur-sm p-12 rounded-2xl border border-[#F5F5F5]/5 shadow-inner hover-outline">
-              <div ref={canvasRef} className="w-full h-[600px] flex items-center justify-center">
-                {!networkLoaded && (
-                  <div className="text-[#F5F5F5]/60 text-center">
-                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#C7A963] mx-auto mb-6"></div>
-                    <p className="font-light tracking-wide">Loading interactive network...</p>
-                  </div>
-                )}
-                {/* Fallback static network if D3 fails */}
-                {networkLoaded && canvasRef.current && canvasRef.current.children.length === 0 && (
-                  <div className="w-full h-full flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-[#F5F5F5]/40 text-sm mb-4">Network visualization</div>
-                      <div className="grid grid-cols-4 gap-4 max-w-md mx-auto">
-                        <div className="w-3 h-3 bg-[#E5E5E5] rounded-full"></div>
-                        <div className="w-3 h-3 bg-[#4A7C59] rounded-full"></div>
-                        <div className="w-3 h-3 bg-[#B76E79] rounded-full"></div>
-                        <div className="w-3 h-3 bg-[#C7A963] rounded-full"></div>
-                        <div className="w-3 h-3 bg-[#4A7C59] rounded-full"></div>
-                        <div className="w-3 h-3 bg-[#B76E79] rounded-full"></div>
-                        <div className="w-3 h-3 bg-[#C7A963] rounded-full"></div>
-                        <div className="w-3 h-3 bg-[#4A7C59] rounded-full"></div>
-                      </div>
-                      <div className="text-[#F5F5F5]/30 text-xs mt-4">15 connected nodes</div>
-                    </div>
-                  </div>
-                )}
-              </div>
+        {/* Interactive Network Visualization */}
+        <div className="container mx-auto px-4 sm:px-8 mb-16 sm:mb-24">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-['Playfair_Display'] font-bold text-[#F5F5F5] mb-4 sm:mb-6">
+                Network Intelligence
+              </h2>
+              <p className="text-sm sm:text-base text-[#F5F5F5]/70 font-light tracking-wide max-w-3xl mx-auto">
+                Interactive visualization of SquidTalk guests and Outliers members
+              </p>
+            </div>
+
+            {/* Network Map Container */}
+            <div className="bg-gradient-to-br from-black via-gray-900/20 to-black border border-[#F5F5F5]/10 rounded-2xl sm:rounded-3xl p-4 sm:p-8 md:p-16 shadow-2xl overflow-hidden">
+              <div 
+                ref={canvasRef}
+                className="w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] xl:h-[800px]"
+                style={{ minHeight: '400px' }}
+              ></div>
               
               {/* Legend moved here */}
-              <div className="flex justify-center gap-16 text-sm text-[#F5F5F5]/60 font-light tracking-wide mt-12 pt-8 border-t border-[#F5F5F5]/10">
-                <div className="flex items-center gap-4">
-                  <div className="w-3 h-3 bg-white rounded-full border border-[#F5F5F5]/30"></div>
+              <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-16 text-xs sm:text-sm text-[#F5F5F5]/60 font-light tracking-wide mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-[#F5F5F5]/10">
+                <div className="flex items-center justify-center sm:justify-start gap-3 sm:gap-4">
+                  <div className="w-2 h-2 sm:w-3 sm:h-3 bg-white rounded-full border border-[#F5F5F5]/30"></div>
                   <span>SquidTalk Guests</span>
                 </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-3 h-3 bg-[#C7A963] rounded-full border border-[#F5F5F5]/30"></div>
+                <div className="flex items-center justify-center sm:justify-start gap-3 sm:gap-4">
+                  <div className="w-2 h-2 sm:w-3 sm:h-3 bg-[#C7A963] rounded-full border border-[#F5F5F5]/30"></div>
                   <span>Outliers Members</span>
                 </div>
               </div>
