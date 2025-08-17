@@ -75,12 +75,12 @@ export default function Home() {
         <div className="space-y-3">
           <h2 className="text-lg font-medium text-gray-700 text-center">contact</h2>
           <div className="flex justify-center">
-            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 p-4 md:p-6 bg-white border-2 border-blue-300 rounded-xl shadow-sm">
+            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 p-6 bg-white border-2 border-blue-300 rounded-xl shadow-sm">
               <a
                 href="https://linkedin.com/in/hanniganalderson"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-3 md:px-4 py-2 bg-white border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-blue-700 group text-sm md:text-base"
+                className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-blue-700 group text-sm md:text-base"
               >
                 <Linkedin className="w-4 h-4" />
                 <span>linkedin</span>
@@ -88,7 +88,7 @@ export default function Home() {
               
               <a
                 href="mailto:hi@hannigana.com"
-                className="flex items-center gap-2 px-3 md:px-4 py-2 bg-white border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-blue-700 group text-sm md:text-base"
+                className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-blue-700 group text-sm md:text-base"
               >
                 <Mail className="w-4 h-4" />
                 <span>hi@hannigana.com</span>
@@ -101,12 +101,12 @@ export default function Home() {
         <div className="space-y-3">
           <h2 className="text-lg font-medium text-gray-700 text-center">projects</h2>
           <div className="flex justify-center">
-            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 p-4 md:p-6 bg-white border-2 border-red-300 rounded-xl shadow-sm">
+            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 p-6 bg-white border-2 border-red-300 rounded-xl shadow-sm">
               <a
                 href="https://aidmatch.co"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex items-center gap-2 px-3 md:px-4 py-2 bg-white border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-red-600 cursor-pointer hover:-translate-y-1 text-sm md:text-base"
+                className="group relative flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-red-600 cursor-pointer hover:-translate-y-1 text-sm md:text-base"
               >
                 <TrendingUp className="w-4 h-4" />
                 <span>aidmatch</span>
@@ -120,7 +120,7 @@ export default function Home() {
                 href="https://www.yelp.com/biz/terra-nova-bend"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex items-center gap-2 px-3 md:px-4 py-2 bg-white border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-red-600 cursor-pointer hover:-translate-y-1 text-sm md:text-base"
+                className="group relative flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-red-600 cursor-pointer hover:-translate-y-1 text-sm md:text-base"
               >
                 <Truck className="w-4 h-4" />
                 <span>terra nova</span>
@@ -132,7 +132,7 @@ export default function Home() {
 
               <Link
                 href="/earlyequity"
-                className="group relative flex items-center gap-2 px-3 md:px-4 py-2 bg-white border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-red-600 cursor-pointer hover:-translate-y-1 text-sm md:text-base"
+                className="group relative flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-red-600 cursor-pointer hover:-translate-y-1 text-sm md:text-base"
               >
                 <Users className="w-4 h-4" />
                 <span>early equity</span>
@@ -149,10 +149,10 @@ export default function Home() {
         <div className="space-y-3">
           <h2 className="text-lg font-medium text-gray-700 text-center">notes</h2>
           <div className="flex justify-center">
-            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 p-4 md:p-6 bg-white border-2 border-purple-300 rounded-xl shadow-sm">
+            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 p-6 bg-white border-2 border-purple-300 rounded-xl shadow-sm">
               {/* Reading & Listening */}
               <Link href="/exploring" className="block">
-                <div className="flex items-center gap-2 px-3 md:px-4 py-2 bg-white border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-purple-600 group text-sm md:text-base">
+                <div className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-purple-600 group text-sm md:text-base">
                   <BookOpen className="w-4 h-4" />
                   <span>reading & listening</span>
                 </div>
@@ -160,7 +160,7 @@ export default function Home() {
 
               {/* Favorite Ideas */}
               <Link href="/favoriteideas" className="block">
-                <div className="flex items-center gap-2 px-3 md:px-4 py-2 bg-white border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-purple-600 group text-sm md:text-base">
+                <div className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-purple-600 group text-sm md:text-base">
                   <Lightbulb className="w-4 h-4" />
                   <span>favorite ideas</span>
                 </div>
@@ -168,7 +168,7 @@ export default function Home() {
 
               {/* My Notes */}
               <Link href="/myideas" className="block">
-                <div className="flex items-center gap-2 px-3 md:px-4 py-2 bg-white border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-purple-600 group text-sm md:text-base">
+                <div className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-purple-600 group text-sm md:text-base">
                   <FileText className="w-4 h-4" />
                   <span>my notes</span>
                 </div>
