@@ -36,89 +36,97 @@ export default function MyIdeas() {
         </div>
         
         <article className="space-y-6">
-          {/* Graduating Debt Free Section */}
-          <div className="group cursor-pointer" onClick={() => toggleSection('graduating-debt-free')}>
+          {/* On Leaving the House Section */}
+          <div className="group cursor-pointer" onClick={() => toggleSection('leaving-house')}>
             <div className="flex items-center justify-between py-3 px-4 border-b border-gray-100 hover:border-gray-200 transition-colors duration-200">
               <h2 className="text-lg font-medium text-gray-900 group-hover:text-purple-700 transition-colors duration-200">
-                Graduating Debt Free
+                on leaving the house
               </h2>
-              {expandedSections.includes('graduating-debt-free') ? (
+              {expandedSections.includes('leaving-house') ? (
                 <ChevronDown className="w-4 h-4 text-purple-600 transition-transform duration-200" />
               ) : (
                 <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-purple-600 transition-transform duration-200" />
               )}
             </div>
             
-            {expandedSections.includes('graduating-debt-free') && (
+            {expandedSections.includes('leaving-house') && (
               <div className="px-4 py-6 bg-gray-50/50 animate-in slide-in-from-top-2 duration-300">
                 <p className="text-gray-600 mb-6 leading-relaxed text-sm">
-                  Here's a distilled blueprint I've used for how I'll graduate debt free — something I've put a lot of thought into.
+                  Whether you want to or not, leaving the house consistently helps in all facets of life. Your environment pushes you more than willpower. Habitually you'll be better off.
                 </p>
-                
-                <div className="space-y-3 text-gray-700 text-sm">
-                  {[
-                    "High school dual enrollment/APs",
-                    "Community college: partial or full, online or in person, it is an immense saving opportunity.",
-                    "Be aware of all possible grants",
-                    "Scholarships — emphasis on local, express clear pain point and how the scholarship will directly benefit you",
-                    "Living with family",
-                    "Taking annoying prerequisites online to free up time to work more",
-                    "Work at a job that is not mentally taxing or demanding",
-                    "Internships and/or summer school to graduate on time/early",
-                    "Dependency status — improve aid",
-                    "Correctly plan for classes ahead of time, only take what you need",
-                    "General frugality, applicable to all of life",
-                    "For loans you're not actively using, keep in HYSA. Ideally only take subsidized loans out.",
-                    "Get the $2k AOTC tax credit every year you're eligible.",
-                    "Leverage AI for course planning & financial aid discovery. Generate the right prompt and it will be beyond easy."
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <span className="text-purple-600 font-medium text-xs mt-1">
-                        {String(index + 1).padStart(2, '0')}
-                      </span>
-                      <span className="leading-relaxed">{item}</span>
-                    </div>
-                  ))}
-                </div>
               </div>
             )}
           </div>
 
-          {/* Bill Perkins Ideology Section */}
-          <div className="group cursor-pointer" onClick={() => toggleSection('bill-perkins')}>
+          {/* Mental Compounding Section */}
+          <div className="py-3 px-4 border-b border-gray-100">
+            <h2 className="text-lg font-medium text-gray-900">
+              mental compounding
+            </h2>
+          </div>
+
+          {/* Confidence/EQ Realization Section */}
+          <div className="group cursor-pointer" onClick={() => toggleSection('confidence-eq')}>
             <div className="flex items-center justify-between py-3 px-4 border-b border-gray-100 hover:border-gray-200 transition-colors duration-200">
               <h2 className="text-lg font-medium text-gray-900 group-hover:text-purple-700 transition-colors duration-200">
-                Bill Perkins Ideology
+                confidence/eq realization
               </h2>
-              {expandedSections.includes('bill-perkins') ? (
+              {expandedSections.includes('confidence-eq') ? (
                 <ChevronDown className="w-4 h-4 text-purple-600 transition-transform duration-200" />
               ) : (
                 <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-purple-600 transition-transform duration-200" />
               )}
             </div>
             
-            {expandedSections.includes('bill-perkins') && (
+            {expandedSections.includes('confidence-eq') && (
               <div className="px-4 py-6 bg-gray-50/50 animate-in slide-in-from-top-2 duration-300">
                 <p className="text-gray-600 mb-6 leading-relaxed text-sm">
-                  Focus on earning what you need and prioritizing fulfillment. Knowing when to stop is as important, if not more so, than building wealth in the first place.
+                  Confidence got easier once I realized it's more embarrassing to be guarded than just to be myself. High EQ is about the same thing but toward others, making people feel valued and building them up.
                 </p>
-                
-                <div className="space-y-3 text-gray-700 text-sm">
-                  {[
-                    "Earn what you need, not endless wealth",
-                    "Prioritize fulfillment over accumulation",
-                    "Know when to stop building wealth",
-                    "Balance financial security with life satisfaction",
-                    "Quality of life over quantity of money"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <span className="text-purple-600 font-medium text-xs mt-1">
-                        {String(index + 1).padStart(2, '0')}
-                      </span>
-                      <span className="leading-relaxed">{item}</span>
-                    </div>
-                  ))}
-                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Personal Clarity Section */}
+          <div className="group cursor-pointer" onClick={() => toggleSection('personal-clarity')}>
+            <div className="flex items-center justify-between py-3 px-4 border-b border-gray-100 hover:border-gray-200 transition-colors duration-200">
+              <h2 className="text-lg font-medium text-gray-900 group-hover:text-purple-700 transition-colors duration-200">
+                personal clarity
+              </h2>
+              {expandedSections.includes('personal-clarity') ? (
+                <ChevronDown className="w-4 h-4 text-purple-600 transition-transform duration-200" />
+              ) : (
+                <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-purple-600 transition-transform duration-200" />
+              )}
+            </div>
+            
+            {expandedSections.includes('personal-clarity') && (
+              <div className="px-4 py-6 bg-gray-50/50 animate-in slide-in-from-top-2 duration-300">
+                <p className="text-gray-600 mb-6 leading-relaxed text-sm">
+                  As a kid there was a lot of dread and uncertainty, always expecting I'd have to do things I didn't want. Now I have clarity. Life can be structured however I want. The less I desire, the fewer forced obligations there are. Almost everything can be turned into something I want to do.
+                </p>
+              </div>
+            )}
+          </div>
+
+          {/* Elated Feeling Section */}
+          <div className="group cursor-pointer" onClick={() => toggleSection('elated-feeling')}>
+            <div className="flex items-center justify-between py-3 px-4 border-b border-gray-100 hover:border-gray-200 transition-colors duration-200">
+              <h2 className="text-lg font-medium text-gray-900 group-hover:text-purple-700 transition-colors duration-200">
+                elated feeling
+              </h2>
+              {expandedSections.includes('elated-feeling') ? (
+                <ChevronDown className="w-4 h-4 text-purple-600 transition-transform duration-200" />
+              ) : (
+                <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-purple-600 transition-transform duration-200" />
+              )}
+            </div>
+            
+            {expandedSections.includes('elated-feeling') && (
+              <div className="px-4 py-6 bg-gray-50/50 animate-in slide-in-from-top-2 duration-300">
+                <p className="text-gray-600 mb-6 leading-relaxed text-sm">
+                  I feel elated and it's coming from realizing everything boils down to decision making, and there's not much to dread out of your control. Taking risks gives excitement, purpose, and fulfillment. All we have to optimize for is fulfillment, for ourselves and the people around us.
+                </p>
               </div>
             )}
           </div>

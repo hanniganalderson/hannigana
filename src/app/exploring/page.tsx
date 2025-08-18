@@ -30,26 +30,26 @@ export default function Exploring() {
       <div className="flex flex-col gap-8">
         <div className="text-center">
           <h1 className="text-4xl font-serif font-bold tracking-tight text-gray-900 mb-2">
-            now reading/listening
+            reading/listening
           </h1>
           <div className="w-16 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
         </div>
         
         <article className="space-y-6">
-          {/* Current Books Section */}
-          <div className="group cursor-pointer" onClick={() => toggleSection('current-books')}>
+          {/* Reading Section */}
+          <div className="group cursor-pointer" onClick={() => toggleSection('reading')}>
             <div className="flex items-center justify-between py-3 px-4 border-b border-gray-100 hover:border-gray-200 transition-colors duration-200">
               <h2 className="text-lg font-medium text-gray-900 group-hover:text-purple-700 transition-colors duration-200">
-                Current Books
+                reading
               </h2>
-              {expandedSections.includes('current-books') ? (
+              {expandedSections.includes('reading') ? (
                 <ChevronDown className="w-4 h-4 text-purple-600 transition-transform duration-200" />
               ) : (
                 <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-purple-600 transition-transform duration-200" />
               )}
             </div>
             
-            {expandedSections.includes('current-books') && (
+            {expandedSections.includes('reading') && (
               <div className="px-4 py-6 bg-gray-50/50 animate-in slide-in-from-top-2 duration-300">
                 <p className="text-gray-600 mb-6 leading-relaxed text-sm">
                   Books I'm currently reading and my thoughts on them.
@@ -72,20 +72,20 @@ export default function Exploring() {
             )}
           </div>
 
-          {/* Podcasts Section */}
-          <div className="group cursor-pointer" onClick={() => toggleSection('podcasts')}>
+          {/* Listening To Section */}
+          <div className="group cursor-pointer" onClick={() => toggleSection('listening')}>
             <div className="flex items-center justify-between py-3 px-4 border-b border-gray-100 hover:border-gray-200 transition-colors duration-200">
               <h2 className="text-lg font-medium text-gray-900 group-hover:text-purple-700 transition-colors duration-200">
-                Podcasts
+                listening to
               </h2>
-              {expandedSections.includes('podcasts') ? (
+              {expandedSections.includes('listening') ? (
                 <ChevronDown className="w-4 h-4 text-purple-600 transition-transform duration-200" />
               ) : (
                 <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-purple-600 transition-transform duration-200" />
               )}
             </div>
             
-            {expandedSections.includes('podcasts') && (
+            {expandedSections.includes('listening') && (
               <div className="px-4 py-6 bg-gray-50/50 animate-in slide-in-from-top-2 duration-300">
                 <p className="text-gray-600 mb-6 leading-relaxed text-sm">
                   Podcasts I'm listening to and key takeaways.
@@ -96,6 +96,70 @@ export default function Exploring() {
                     "The Iced Coffee Hour",
                     "Modern Wisdom",
                     "Founders"
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <span className="text-purple-600 font-medium text-xs mt-1">
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+                      <span className="leading-relaxed">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Archive Section */}
+          <div className="group cursor-pointer" onClick={() => toggleSection('archive')}>
+            <div className="flex items-center justify-between py-3 px-4 border-b border-gray-100 hover:border-gray-200 transition-colors duration-200">
+              <h2 className="text-lg font-medium text-gray-900 group-hover:text-purple-700 transition-colors duration-200">
+                archive
+              </h2>
+              {expandedSections.includes('archive') ? (
+                <ChevronDown className="w-4 h-4 text-purple-600 transition-transform duration-200" />
+              ) : (
+                <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-purple-600 transition-transform duration-200" />
+              )}
+            </div>
+            
+            {expandedSections.includes('archive') && (
+              <div className="px-4 py-6 bg-gray-50/50 animate-in slide-in-from-top-2 duration-300">
+                <p className="text-gray-600 mb-6 leading-relaxed text-sm">
+                  Complete list of all books I've read.
+                </p>
+                
+                <div className="space-y-3 text-gray-700 text-sm">
+                  {[
+                    "The Millionaire Mind by Thomas Stanley",
+                    "Rich Dad Poor Dad by Robert Kiyosaki",
+                    "7 Secrets to Investing Like Warren Buffett by Mary Buffett",
+                    "Buffett by Roger Lowenstein",
+                    "The Richest Man in Babylon by George S. Clason",
+                    "The Millionaire Next Door by Thomas Stanley",
+                    "How to Win Friends & Influence People by Dale Carnegie",
+                    "Financial Freedom by Grant Sabatier",
+                    "Outliers by Malcolm Gladwell",
+                    "The 4 Hour Workweek by Tim Ferriss",
+                    "How to Invest in Real Estate by Joshua Dorkin and Brandon Turner",
+                    "Rich Dad's Cashflow Quadrant by Robert Kiyosaki",
+                    "A Random Walk Down Wall Street by Burton Malkiel",
+                    "The Power of Habit by Charles Duhigg",
+                    "The Compound Effect by Darren Hardy",
+                    "The Power of Now by Eckhart Tolle",
+                    "1984 by George Orwell",
+                    "Who Moved My Cheese by Spencer Johnson",
+                    "The Metamorphosis by Franz Kafka",
+                    "The Great Gatsby by F. Scott Fitzgerald",
+                    "Thinking, Fast and Slow by Daniel Kahneman",
+                    "The 7 Habits of Highly Effective People by Stephen Covey",
+                    "The Great Mental Models Volume 1 by Shane Parrish",
+                    "The Lean Startup by Eric Ries",
+                    "The E-Myth by Michael Gerber",
+                    "Shoe Dog by Phil Knight",
+                    "Blink by Malcolm Gladwell",
+                    "The Tipping Point by Malcolm Gladwell",
+                    "The Psychology of Money by Morgan Housel",
+                    "Smarter Faster Better by Charles Duhigg"
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-3">
                       <span className="text-purple-600 font-medium text-xs mt-1">
