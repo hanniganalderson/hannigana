@@ -28,7 +28,7 @@ export default function Goals2027() {
           <div className="bg-white/95 backdrop-blur-sm shadow-lg rounded-xl p-6 border border-gray-200">
             <h2 className="text-lg text-gray-600 mb-4 text-center">goals</h2>
             <div className="text-center">
-              <p className="text-gray-600 text-lg">TBD</p>
+              <p className="text-gray-600 text-lg">job</p>
             </div>
           </div>
         </div>

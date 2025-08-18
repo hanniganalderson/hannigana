@@ -87,7 +87,7 @@ export default function Home() {
                 </a>, graduating <Link href="/2027" className="group relative cursor-pointer text-blue-600 hover:text-blue-800 transition-colors duration-200 text-sm md:text-base">
                   2027
                   <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none whitespace-nowrap group-hover:-translate-y-1 z-20">
-                    2027 goals
+                    goals
                     <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
                   </div>
                 </Link>
@@ -128,12 +128,10 @@ export default function Home() {
                   </li>
                   <li className="flex items-start gap-2 md:gap-3">
                     <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mt-2 flex-shrink-0"></span>
-                    <span className="text-gray-700 text-sm md:text-base group relative cursor-pointer">
-                      systems for personal growth
-                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none whitespace-nowrap group-hover:-translate-y-1">
-                        see notes
-                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
-                      </div>
+                    <span className="text-gray-700 text-sm md:text-base">
+                      systems for personal <a href="https://www.highagency.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 transition-colors duration-200">
+                        growth
+                      </a>
                     </span>
                   </li>
                   <li className="flex items-start gap-2 md:gap-3">
