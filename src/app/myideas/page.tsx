@@ -59,23 +59,23 @@ export default function MyIdeas() {
           </div>
 
           {/* Mental Compounding Section */}
-          <div className="py-3 px-4 border-b border-gray-100">
-            <button
-              onClick={() => toggleSection('mental-compounding')}
-              className="flex items-center justify-between w-full text-left hover:bg-gray-50 transition-colors duration-200"
-            >
-              <h2 className="text-lg font-medium text-gray-900">
+          <div className="group cursor-pointer" onClick={() => toggleSection('mental-compounding')}>
+            <div className="flex items-center justify-between py-3 px-4 border-b border-gray-100 hover:border-gray-200 transition-colors duration-200">
+              <h2 className="text-lg font-medium text-gray-900 group-hover:text-purple-700 transition-colors duration-200">
                 mental compounding
               </h2>
-              <ChevronDown
-                className={`w-5 h-5 text-gray-400 transition-transform duration-200 ${
-                  expandedSections.includes('mental-compounding') ? 'rotate-180' : ''
-                }`}
-              />
-            </button>
+              {expandedSections.includes('mental-compounding') ? (
+                <ChevronDown className="w-4 h-4 text-purple-600 transition-transform duration-200" />
+              ) : (
+                <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-purple-600 transition-transform duration-200" />
+              )}
+            </div>
+            
             {expandedSections.includes('mental-compounding') && (
-              <div className="mt-3 text-gray-600">
-                Both social media and large language models compound the direction your mind is already pointed.
+              <div className="px-4 py-6 bg-gray-50/50 animate-in slide-in-from-top-2 duration-300">
+                <p className="text-gray-600 mb-6 leading-relaxed text-sm">
+                  Both social media and large language models compound the direction your mind is already pointed.
+                </p>
               </div>
             )}
           </div>
