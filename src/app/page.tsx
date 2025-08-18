@@ -12,13 +12,20 @@ export default function Home() {
     <div className="container mx-auto max-w-2xl px-4 py-8 md:py-12 lg:py-20">
       <div className="flex flex-col gap-8 md:gap-10">
         {/* About Section */}
-        <div className="flex flex-col items-center text-center gap-6 md:gap-8 p-8 md:p-12 rounded-2xl bg-white shadow-lg relative overflow-hidden">
-          {/* Animated multicolor outline */}
-          <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-400 via-purple-400 via-pink-400 to-blue-400 bg-[length:400%_100%] animate-gradient-x opacity-40 border-4"></div>
-          <div className="absolute inset-1 rounded-2xl bg-white"></div>
+        <div className="flex flex-col items-center text-center gap-6 md:gap-8 p-6 md:p-8 lg:p-12 rounded-2xl bg-white/95 backdrop-blur-sm shadow-2xl relative overflow-hidden hover:shadow-3xl transition-all duration-500 hover:-translate-y-1 hover:scale-[1.01]">
+          {/* Animated multicolor outline with glow effect */}
+          <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-400 via-purple-400 via-pink-400 to-blue-400 bg-[length:400%_100%] animate-gradient-x opacity-50 shadow-lg"></div>
+          <div className="absolute inset-0.5 rounded-2xl bg-white/90 backdrop-blur-sm shadow-inner"></div>
           
-          {/* Profile Image */}
-          <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden ring-4 ring-blue-200 shadow-xl relative z-10">
+          {/* Subtle inner glow */}
+          <div className="absolute inset-2 rounded-2xl bg-gradient-to-br from-blue-50/15 via-purple-50/15 to-pink-50/15"></div>
+          
+          {/* Enhanced depth with multiple shadow layers */}
+          <div className="absolute inset-0 rounded-2xl shadow-[0_0_40px_rgba(59,130,246,0.08)]"></div>
+          <div className="absolute inset-0 rounded-2xl shadow-[0_6px_25px_rgba(0,0,0,0.08)]"></div>
+          
+          {/* Profile Image with enhanced shadow */}
+          <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-full overflow-hidden ring-4 ring-blue-200 shadow-2xl relative z-10 bg-white hover:scale-105 transition-transform duration-300">
             <Image
               src="/profile.png"
               alt="Hannigan Alderson"
@@ -30,10 +37,10 @@ export default function Home() {
           
           {/* Name and Location */}
           <div className="relative z-10">
-            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-3">Hannigan Alderson</h1>
+            <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-3">Hannigan Alderson</h1>
             <div className="flex items-center justify-center gap-2 text-gray-600 mb-1">
               <MapPin className="w-4 h-4" />
-              <span>Bend, OR</span>
+              <span className="text-sm md:text-base">Bend, OR</span>
             </div>
           </div>
           
@@ -50,11 +57,17 @@ export default function Home() {
             <div>
               <p className="text-gray-700 font-medium mb-2 md:mb-3 text-center text-sm md:text-base">Interested in:</p>
               <ul className="space-y-2 md:space-y-3">
-                <li className="flex items-start gap-3">
+                <li className="flex items-start gap-2 md:gap-3">
                   <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mt-2 flex-shrink-0"></span>
-                  <span className="text-gray-700 text-sm md:text-base">software startups</span>
+                  <span className="text-gray-700 text-sm md:text-base group relative cursor-pointer">
+                    software startups
+                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none whitespace-nowrap group-hover:-translate-y-1">
+                      in Bend & Phoenix metro
+                      <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
+                    </div>
+                  </span>
                 </li>
-                <li className="flex items-start gap-3">
+                <li className="flex items-start gap-2 md:gap-3">
                   <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-2 flex-shrink-0"></span>
                   <span className="text-gray-700 text-sm md:text-base group relative cursor-pointer">
                     real estate
@@ -64,7 +77,7 @@ export default function Home() {
                     </div>
                   </span>
                 </li>
-                <li className="flex items-start gap-3">
+                <li className="flex items-start gap-2 md:gap-3">
                   <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-2 flex-shrink-0"></span>
                   <span className="text-gray-700 text-sm md:text-base group relative cursor-pointer">
                     investing
@@ -74,11 +87,11 @@ export default function Home() {
                     </div>
                   </span>
                 </li>
-                <li className="flex items-start gap-3">
+                <li className="flex items-start gap-2 md:gap-3">
                   <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-gradient-to-r from-pink-500 to-blue-500 rounded-full mt-2 flex-shrink-0"></span>
                   <span className="text-gray-700 text-sm md:text-base">decision making & leverage</span>
                 </li>
-                <li className="flex items-start gap-3">
+                <li className="flex items-start gap-2 md:gap-3">
                   <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mt-2 flex-shrink-0"></span>
                   <span className="text-gray-700 text-sm md:text-base group relative cursor-pointer">
                     systems for personal growth
@@ -88,7 +101,7 @@ export default function Home() {
                     </div>
                   </span>
                 </li>
-                <li className="flex items-start gap-3">
+                <li className="flex items-start gap-2 md:gap-3">
                   <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-2 flex-shrink-0"></span>
                   <span className="text-gray-700 text-sm md:text-base">fitness and nutrition</span>
                 </li>
@@ -99,14 +112,25 @@ export default function Home() {
 
         {/* Contact Section */}
         <div className="space-y-3">
-          <h2 className="text-lg font-medium text-gray-700 text-center">contact</h2>
+          <h2 className="text-base md:text-lg font-medium text-gray-700 text-center">contact</h2>
           <div className="flex justify-center">
-            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 p-6 bg-white border-2 border-blue-300 rounded-xl shadow-sm">
+            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 p-4 md:p-6 bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl relative overflow-hidden hover:shadow-3xl transition-all duration-500 hover:-translate-y-1 hover:scale-[1.01]">
+              {/* Animated blue outline - very thin */}
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-400 via-blue-500 to-blue-400 bg-[length:400%_100%] animate-gradient-x opacity-35"></div>
+              <div className="absolute inset-0.5 rounded-xl bg-white/90 backdrop-blur-sm"></div>
+              
+              {/* Subtle inner glow */}
+              <div className="absolute inset-1 rounded-xl bg-gradient-to-br from-blue-50/8 to-blue-100/8"></div>
+              
+              {/* Layered shadows for depth */}
+              <div className="absolute inset-0 rounded-xl shadow-[0_3px_15px_rgba(59,130,246,0.12)]"></div>
+              <div className="absolute inset-0 rounded-xl shadow-[0_6px_20px_rgba(0,0,0,0.08)]"></div>
+              
               <a
                 href="https://linkedin.com/in/hanniganalderson"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-blue-700 group text-sm md:text-base"
+                className="flex items-center justify-center gap-2 px-3 md:px-4 py-2.5 md:py-2 bg-white/90 backdrop-blur-sm border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-blue-700 group text-sm md:text-base relative z-10 hover:scale-105 w-full sm:w-auto min-h-[44px] sm:min-h-0"
               >
                 <Linkedin className="w-4 h-4" />
                 <span>linkedin</span>
@@ -114,7 +138,7 @@ export default function Home() {
               
               <a
                 href="mailto:hi@hannigana.com"
-                className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-blue-700 group text-sm md:text-base"
+                className="flex items-center justify-center gap-2 px-3 md:px-4 py-2.5 md:py-2 bg-white/90 backdrop-blur-sm border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-blue-700 group text-sm md:text-base relative z-10 hover:scale-105 w-full sm:w-auto min-h-[44px] sm:min-h-0"
               >
                 <Mail className="w-4 h-4" />
                 <span>hi@hannigana.com</span>
@@ -125,18 +149,29 @@ export default function Home() {
 
         {/* Projects Section */}
         <div className="space-y-3">
-          <h2 className="text-lg font-medium text-gray-700 text-center">projects</h2>
+          <h2 className="text-base md:text-lg font-medium text-gray-700 text-center">projects</h2>
           <div className="flex justify-center">
-            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 p-6 bg-white border-2 border-red-300 rounded-xl shadow-sm">
+            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 p-6 md:p-8 bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl relative overflow-visible hover:shadow-3xl transition-all duration-500 hover:-translate-y-1 hover:scale-[1.01]">
+              {/* Animated red outline - very thin */}
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-red-400 via-red-500 to-red-400 bg-[length:400%_100%] animate-gradient-x opacity-35"></div>
+              <div className="absolute inset-0.5 rounded-xl bg-white/90 backdrop-blur-sm"></div>
+              
+              {/* Subtle inner glow */}
+              <div className="absolute inset-1 rounded-xl bg-gradient-to-br from-red-50/8 to-red-100/8"></div>
+              
+              {/* Layered shadows for depth */}
+              <div className="absolute inset-0 rounded-xl shadow-[0_3px_15px_rgba(239,68,68,0.12)]"></div>
+              <div className="absolute inset-0 rounded-xl shadow-[0_6px_20px_rgba(0,0,0,0.08)]"></div>
+              
               <a
                 href="https://aidmatch.co"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-red-600 cursor-pointer hover:-translate-y-1 text-sm md:text-base"
+                className="group relative flex items-center justify-center gap-2 px-3 md:px-4 py-2.5 md:py-2 bg-white/90 backdrop-blur-sm border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-red-600 cursor-pointer hover:-translate-y-1 text-sm md:text-base relative z-10 hover:scale-105 w-full sm:w-auto min-h-[44px] sm:min-h-0"
               >
                 <TrendingUp className="w-4 h-4" />
                 <span>aidmatch</span>
-                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none whitespace-nowrap group-hover:-translate-y-1">
+                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none whitespace-nowrap group-hover:-translate-y-1 z-20">
                   AI scholarship matching
                   <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
                 </div>
@@ -146,11 +181,11 @@ export default function Home() {
                 href="https://www.yelp.com/biz/terra-nova-bend"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-red-600 cursor-pointer hover:-translate-y-1 text-sm md:text-base"
+                className="group relative flex items-center justify-center gap-2 px-3 md:px-4 py-2.5 md:py-2 bg-white/90 backdrop-blur-sm border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-red-600 cursor-pointer hover:-translate-y-1 text-sm md:text-base relative z-10 hover:scale-105 w-full sm:w-auto min-h-[44px] sm:min-h-0"
               >
                 <Truck className="w-4 h-4" />
                 <span>terra nova</span>
-                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none whitespace-nowrap group-hover:-translate-y-1">
+                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none whitespace-nowrap group-hover:-translate-y-1 z-20">
                   junk removal & hauling
                   <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
                 </div>
@@ -158,11 +193,11 @@ export default function Home() {
 
               <Link
                 href="/earlyequity"
-                className="group relative flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-red-600 cursor-pointer hover:-translate-y-1 text-sm md:text-base"
+                className="group relative flex items-center justify-center gap-2 px-3 md:px-4 py-2.5 md:py-2 bg-white/90 backdrop-blur-sm border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-red-600 cursor-pointer hover:-translate-y-1 text-sm md:text-base relative z-10 hover:scale-105 w-full sm:w-auto min-h-[44px] sm:min-h-0"
               >
                 <Users className="w-4 h-4" />
                 <span>early equity</span>
-                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none whitespace-nowrap group-hover:-translate-y-1">
+                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none whitespace-nowrap group-hover:-translate-y-1 z-20">
                   founder & investor conversations
                   <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
                 </div>
@@ -173,28 +208,39 @@ export default function Home() {
 
         {/* Notes Section */}
         <div className="space-y-3">
-          <h2 className="text-lg font-medium text-gray-700 text-center">notes</h2>
+          <h2 className="text-base md:text-lg font-medium text-gray-700 text-center">notes</h2>
           <div className="flex justify-center">
-            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 p-6 bg-white border-2 border-purple-300 rounded-xl shadow-sm">
+            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 p-4 md:p-6 bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl relative overflow-hidden hover:shadow-3xl transition-all duration-500 hover:-translate-y-1 hover:scale-[1.01]">
+              {/* Animated purple outline - very thin */}
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-400 via-purple-500 to-purple-400 bg-[length:400%_100%] animate-gradient-x opacity-35"></div>
+              <div className="absolute inset-0.5 rounded-xl bg-white/90 backdrop-blur-sm"></div>
+              
+              {/* Subtle inner glow */}
+              <div className="absolute inset-1 rounded-xl bg-gradient-to-br from-purple-50/8 to-purple-100/8"></div>
+              
+              {/* Layered shadows for depth */}
+              <div className="absolute inset-0 rounded-xl shadow-[0_3px_15px_rgba(147,51,234,0.12)]"></div>
+              <div className="absolute inset-0 rounded-xl shadow-[0_6px_20px_rgba(0,0,0,0.08)]"></div>
+              
               {/* Reading & Listening */}
-              <Link href="/exploring" className="block">
-                <div className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-purple-600 group text-sm md:text-base">
+              <Link href="/exploring" className="block w-full sm:w-auto">
+                <div className="flex items-center justify-center gap-2 px-3 md:px-4 py-2.5 md:py-2 bg-white/90 backdrop-blur-sm border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-purple-600 group text-sm md:text-base relative z-10 hover:scale-105 w-full min-h-[44px] sm:min-h-0">
                   <BookOpen className="w-4 h-4" />
                   <span>reading & listening</span>
                 </div>
               </Link>
 
               {/* Favorite Ideas */}
-              <Link href="/favoriteideas" className="block">
-                <div className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-purple-600 group text-sm md:text-base">
+              <Link href="/favoriteideas" className="block w-full sm:w-auto">
+                <div className="flex items-center justify-center gap-2 px-3 md:px-4 py-2.5 md:py-2 bg-white/90 backdrop-blur-sm border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-purple-600 group text-sm md:text-base relative z-10 hover:scale-105 w-full min-h-[44px] sm:min-h-0">
                   <Lightbulb className="w-4 h-4" />
                   <span>favorite ideas</span>
                 </div>
               </Link>
 
               {/* My Notes */}
-              <Link href="/myideas" className="block">
-                <div className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-purple-600 group text-sm md:text-base">
+              <Link href="/myideas" className="block w-full sm:w-auto">
+                <div className="flex items-center justify-center gap-2 px-3 md:px-4 py-2.5 md:py-2 bg-white/90 backdrop-blur-sm border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-purple-600 group text-sm md:text-base relative z-10 hover:scale-105 w-full min-h-[44px] sm:min-h-0">
                   <FileText className="w-4 h-4" />
                   <span>my notes</span>
                 </div>

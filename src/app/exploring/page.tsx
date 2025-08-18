@@ -94,6 +94,7 @@ export default function Exploring() {
                 <div className="space-y-3 text-gray-700 text-sm">
                   {[
                     "The Iced Coffee Hour",
+                    "Modern Wisdom - Jimmy Carr #953",
                     "Modern Wisdom",
                     "Founders"
                   ].map((item, index) => (
