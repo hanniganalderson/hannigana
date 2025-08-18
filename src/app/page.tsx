@@ -12,7 +12,7 @@ export default function Home() {
   const [showIntro, setShowIntro] = useState(true);
 
   useEffect(() => {
-    const t = setTimeout(() => setShowIntro(false), 1500);
+    const t = setTimeout(() => setShowIntro(false), 1100);
     return () => clearTimeout(t);
   }, []);
 

@@ -51,10 +51,6 @@ export default function Exploring() {
             
             {expandedSections.includes('reading') && (
               <div className="px-4 py-6 bg-gray-50/50 animate-in slide-in-from-top-2 duration-300">
-                <p className="text-gray-600 mb-6 leading-relaxed text-sm">
-                  Books I'm currently reading and my thoughts on them.
-                </p>
-                
                 <div className="space-y-3 text-gray-700 text-sm">
                   {[
                     "Clear Thinking by Shane Parrish",
@@ -87,10 +83,6 @@ export default function Exploring() {
             
             {expandedSections.includes('listening') && (
               <div className="px-4 py-6 bg-gray-50/50 animate-in slide-in-from-top-2 duration-300">
-                <p className="text-gray-600 mb-6 leading-relaxed text-sm">
-                  Podcasts I'm listening to and key takeaways.
-                </p>
-                
                 <div className="space-y-3 text-gray-700 text-sm">
                   {[
                     "The Iced Coffee Hour",
@@ -125,10 +117,6 @@ export default function Exploring() {
             
             {expandedSections.includes('archive') && (
               <div className="px-4 py-6 bg-gray-50/50 animate-in slide-in-from-top-2 duration-300">
-                <p className="text-gray-600 mb-6 leading-relaxed text-sm">
-                  Complete list of all books I've read.
-                </p>
-                
                 <div className="space-y-3 text-gray-700 text-sm">
                   {[
                     "The Millionaire Mind by Thomas Stanley",
@@ -160,7 +148,20 @@ export default function Exploring() {
                     "Blink by Malcolm Gladwell",
                     "The Tipping Point by Malcolm Gladwell",
                     "The Psychology of Money by Morgan Housel",
-                    "Smarter Faster Better by Charles Duhigg"
+                    "Smarter Faster Better by Charles Duhigg",
+                    "The Almanack of Naval Ravikant",
+                    "The Algebra of Wealth by Scott Galloway",
+                    "Zero to One by Peter Thiel",
+                    "Elon Musk by Ashlee Vance",
+                    "Anthology of Balaji by Balaji Srinivasan",
+                    "Hackers and Painters by Paul Graham",
+                    "The Everything Store by Brad Stone",
+                    "The Hitchhiker's Guide to the Galaxy by Douglas Adams",
+                    "Steve Jobs by Walter Isaacson",
+                    "Elon Musk by Walter Isaacson",
+                    "Poor Charlie's Almanack by Charlie Munger",
+                    "Am I Being Too Subtle by Sam Zell",
+                    "The Bitcoin Standard by Saifedean Ammous"
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-3">
                       <span className="text-purple-600 font-medium text-xs mt-1">
