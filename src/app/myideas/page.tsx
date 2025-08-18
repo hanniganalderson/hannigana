@@ -60,9 +60,24 @@ export default function MyIdeas() {
 
           {/* Mental Compounding Section */}
           <div className="py-3 px-4 border-b border-gray-100">
-            <h2 className="text-lg font-medium text-gray-900">
-              mental compounding
-            </h2>
+            <button
+              onClick={() => toggleSection('mental-compounding')}
+              className="flex items-center justify-between w-full text-left hover:bg-gray-50 transition-colors duration-200"
+            >
+              <h2 className="text-lg font-medium text-gray-900">
+                mental compounding
+              </h2>
+              <ChevronDown
+                className={`w-5 h-5 text-gray-400 transition-transform duration-200 ${
+                  expandedSections.includes('mental-compounding') ? 'rotate-180' : ''
+                }`}
+              />
+            </button>
+            {expandedSections.includes('mental-compounding') && (
+              <div className="mt-3 text-gray-600">
+                Both social media and large language models compound the direction your mind is already pointed.
+              </div>
+            )}
           </div>
 
           {/* Confidence/EQ Realization Section */}
