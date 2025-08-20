@@ -94,7 +94,7 @@ export default function FavoriteIdeas() {
           <div className="group cursor-pointer" onClick={() => toggleSection('compounding-knowledge')}>
             <div className="flex items-center justify-between py-3 px-4 border-b border-gray-100 hover:border-gray-200 transition-colors duration-200">
               <h2 className="text-lg font-medium text-gray-900 group-hover:text-purple-700 transition-colors duration-200">
-                curated knowledge (shane+me)
+                curated knowledge (shane parrish + me)
               </h2>
               {expandedSections.includes('compounding-knowledge') ? (
                 <ChevronDown className="w-4 h-4 text-purple-600 transition-transform duration-200" />
@@ -168,6 +168,38 @@ export default function FavoriteIdeas() {
                   <p>12. The only difference between a successful person and an unsuccessful person is the successful person has tolerated more failures over a longer period of time</p>
                   <p>13. You don't get rid of anxiety or self-doubt, you just learn how to develop the ability to act despite it</p>
                   <p>14. Happiness is not a lack of problems. Happiness is having better problems. Success is having better failures. Discipline is, in a way, having better addictions. You don't get rid of the struggle, you learn to upgrade it</p>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Treadmill Friends Section */}
+          <div className="group cursor-pointer" onClick={() => toggleSection('treadmill-friends')}>
+            <div className="flex items-center justify-between py-3 px-4 border-b border-gray-100 hover:border-gray-200 transition-colors duration-200">
+              <h2 className="text-lg font-medium text-gray-900 group-hover:text-purple-700 transition-colors duration-200">
+                treadmill friends vs sofa friends (from George Mack)
+              </h2>
+              {expandedSections.includes('treadmill-friends') ? (
+                <ChevronDown className="w-4 h-4 text-purple-600 transition-transform duration-200" />
+              ) : (
+                <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-purple-600 transition-transform duration-200" />
+              )}
+            </div>
+            
+            {expandedSections.includes('treadmill-friends') && (
+              <div className="px-4 py-6 bg-gray-50/50 animate-in slide-in-from-top-2 duration-300">
+                <div className="space-y-4 text-gray-600 text-sm leading-relaxed">
+                  <p>Treadmill friends leave you wired. After seeing them you feel like you could sprint. Sofa friends leave you flat. After seeing them you just want to lie down.</p>
+                  <p>That is energy transference. Hard to define, but everyone knows it. It feels like a double espresso after a conversation. Steve Jobs had it so strong people called it a Reality Distortion Field.</p>
+                  <p>Listen to how people speak at funerals. They remember the energy someone gave.</p>
+                  <p>• He made you feel like the only person in the room</p>
+                  <p>• She was the first person to believe in me</p>
+                  <p>This is why the saying makes sense. People do not remember what you said. They remember how you made them feel.</p>
+                  <p>A few notes:</p>
+                  <p>1. It is not mystical. It is probably charisma, tone, belief, expression, and worldview working together.</p>
+                  <p>2. You cannot teach it directly. But it spreads. Spend time with treadmill friends and you pick it up. Spend time with sofa friends and you pick that up too.</p>
+                  <p>3. Be careful with late night dinners with treadmill friends. You might not sleep.</p>
+                  <p>Notice who gives you energy and who drains it. Spend more time with treadmill friends.</p>
                 </div>
               </div>
             )}

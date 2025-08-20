@@ -118,7 +118,7 @@ export default function MyIdeas() {
             {expandedSections.includes('personal-clarity') && (
               <div className="px-4 py-6 bg-gray-50/50 animate-in slide-in-from-top-2 duration-300">
                 <p className="text-gray-600 mb-6 leading-relaxed text-sm">
-                  As a kid there was a lot of dread and uncertainty, always expecting I'd have to do things I didn't want. Now I have clarity. Life can be structured however I want. The less I desire, the fewer forced obligations there are. Almost everything can be turned into something I want to do.
+                  For me as a child, there was a lot of dread and uncertainty, always expecting I'd have to do things I didn't want. Now I have clarity. Life can be structured however I want. The less I desire, the fewer forced obligations there are. Almost everything can be turned into something I want to do.
                 </p>
               </div>
             )}
@@ -140,7 +140,7 @@ export default function MyIdeas() {
             {expandedSections.includes('elated-feeling') && (
               <div className="px-4 py-6 bg-gray-50/50 animate-in slide-in-from-top-2 duration-300">
                 <p className="text-gray-600 mb-6 leading-relaxed text-sm">
-                  I feel elated and it's coming from realizing everything boils down to decision making, and there's not much to dread out of your control. Taking risks gives excitement, purpose, and fulfillment. All we have to optimize for is fulfillment, for ourselves and the people around us.
+                  The elated feeling is coming from realizing everything boils down to decision making, and there's not much to dread out of your control. Taking risks gives excitement, purpose, and fulfillment. All we have to optimize for is fulfillment, for ourselves and the people around us.
                 </p>
               </div>
             )}
