@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { ArrowLeft, ChevronDown, ChevronRight, Clock, Search } from "lucide-react";
+import { ArrowLeft, ChevronDown, ChevronRight, Search } from "lucide-react";
 import { useState } from "react";
 
 export default function MyIdeas() {
@@ -46,23 +46,23 @@ export default function MyIdeas() {
   const sections = [
     {
       id: 'leaving-house',
-      title: 'on leaving the house',
+      title: 'leaving the house',
       content: 'Whether you want to or not, leaving the house consistently helps in all facets of life. Your environment pushes you more than willpower. Habitually you\'ll be better off.'
     },
     {
       id: 'graduating-debt-free',
       title: 'graduating debt free',
-      content: 'Here\'s a distilled blueprint I\'ve used for how I\'ll graduate debt free — something I\'ve put a lot of thought into.',
+      content: 'Here\'s a distilled blueprint I\'ve used for how I\'ll graduate debt free - something I\'ve put a lot of thought into.',
       details: [
         'High school dual enrollment/APs',
         'Community college: partial or full, online or in person, it is an immense saving opportunity.',
         'Be aware of all possible grants',
-        'Scholarships — emphasis on local, express clear pain point and how the scholarship will directly benefit you',
+        'Scholarships - emphasis on local, express clear pain point and how the scholarship will directly benefit you',
         'Living with family',
         'Taking annoying prerequisites online to free up time to work more',
         'Work at a job that is not mentally taxing or demanding',
         'Internships and/or summer school to graduate on time/early',
-        'Dependency status — improve aid',
+        'Dependency status - improve aid',
         'Correctly plan for classes ahead of time, only take what you need',
         'General frugality, applicable to all of life',
         'For loans you\'re not actively using, keep in HYSA. Ideally only take subsidized loans out.',
@@ -77,18 +77,23 @@ export default function MyIdeas() {
     },
     {
       id: 'confidence-eq',
-      title: 'confidence/eq realization',
+      title: 'confidence & eq',
       content: 'Confidence got easier once I realized it\'s more embarrassing to be guarded than just to be myself. High EQ is about the same thing but toward others, making people feel valued and building them up.'
     },
     {
       id: 'personal-clarity',
       title: 'personal clarity',
-      content: 'As a kid there was a lot of dread and uncertainty, always expecting I\'d have to do things I didn\'t want. Now I have clarity. Life can be structured however I want. The less I desire, the fewer forced obligations there are. Almost everything can be turned into something I want to do.'
+      content: 'As a kid I expected dread and obligations. Now I see life can be structured how I want. The less I desire, the fewer obligations. Most things can be turned into something I want to do.'
     },
     {
-      id: 'elated-feeling',
-      title: 'elated feeling',
-      content: 'I feel elated and it\'s coming from realizing everything boils down to decision making, and there\'s not much to dread out of your control. Taking risks gives excitement, purpose, and fulfillment. All we have to optimize for is fulfillment, for ourselves and the people around us.'
+      id: 'fulfillment',
+      title: 'fulfillment',
+      content: 'I realized life boils down to decisions, not dread. Taking risks gives excitement, purpose, and fulfillment. The goal is simple: optimize for fulfillment, for yourself and others.'
+    },
+    {
+      id: 'desire',
+      title: 'desire',
+      content: 'Not wanting something can be as good as having it. The key is to pursue only what you genuinely want and disregard everything else.'
     }
   ];
 
@@ -176,10 +181,6 @@ export default function MyIdeas() {
                       ))}
                     </div>
                   )}
-                  <div className="flex items-center gap-2 text-xs text-gray-400 pt-4 border-t border-gray-200 mt-4 md:mt-0">
-                    <Clock className="w-3 h-3" />
-                    <span>last updated: {new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })} at {new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}</span>
-                  </div>
                 </div>
               )}
             </div>
