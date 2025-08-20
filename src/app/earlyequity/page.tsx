@@ -69,18 +69,6 @@ export default function EarlyEquity() {
             <Youtube className="w-5 h-5 relative z-10" />
             <span className="relative z-10">youtube</span>
           </Link>
-
-          <Link
-            href="https://www.linkedin.com/company/earlyequityhq"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-3 w-full py-3 px-4 bg-white border border-gray-200 hover:shadow-lg rounded-lg transition-all duration-200 text-gray-700 hover:text-purple-700 group relative overflow-hidden"
-          >
-            <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
-            <div className="absolute inset-0.5 rounded-lg bg-white"></div>
-            <Linkedin className="w-5 h-5 relative z-10" />
-            <span className="relative z-10">linkedin</span>
-          </Link>
         </div>
       </div>
     </div>

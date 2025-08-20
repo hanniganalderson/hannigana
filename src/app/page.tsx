@@ -124,7 +124,9 @@ export default function Home() {
                   </li>
                   <li className="flex items-start gap-2 md:gap-3">
                     <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-gradient-to-r from-pink-500 to-blue-500 rounded-full mt-2 flex-shrink-0"></span>
-                    <span className="text-gray-700 text-sm md:text-base">decision making & leverage</span>
+                    <Link href="/favoriteideas" className="text-blue-600 hover:text-blue-800 transition-colors duration-200 text-sm md:text-base">
+                      decision making
+                    </Link>
                   </li>
                   <li className="flex items-start gap-2 md:gap-3">
                     <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mt-2 flex-shrink-0"></span>
@@ -210,20 +212,6 @@ export default function Home() {
                   </div>
                 </a>
 
-                <a
-                  href="https://www.yelp.com/biz/terra-nova-bend"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative flex items-center justify-center gap-2 px-3 md:px-4 py-2.5 md:py-2 bg-white/90 backdrop-blur-sm border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-red-600 cursor-pointer hover:-translate-y-1 text-sm md:text-base relative z-10 hover:scale-105 w-full sm:w-auto min-h-[44px] sm:min-h-0"
-                >
-                  <Truck className="w-4 h-4" />
-                  <span>terra nova</span>
-                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none whitespace-nowrap group-hover:-translate-y-1 z-20">
-                    junk removal & hauling
-                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
-                  </div>
-                </a>
-
                 <Link
                   href="/earlyequity"
                   className="group relative flex items-center justify-center gap-2 px-3 md:px-4 py-2.5 md:py-2 bg-white/90 backdrop-blur-sm border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-red-600 cursor-pointer hover:-translate-y-1 text-sm md:text-base relative z-10 hover:scale-105 w-full sm:w-auto min-h-[44px] sm:min-h-0"
@@ -231,7 +219,7 @@ export default function Home() {
                   <Users className="w-4 h-4" />
                   <span>early equity</span>
                   <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none whitespace-nowrap group-hover:-translate-y-1 z-20">
-                    founder & investor conversations
+                    founder conversations
                     <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
                   </div>
                 </Link>
