@@ -204,6 +204,77 @@ export default function FavoriteIdeas() {
               </div>
             )}
           </div>
+
+          {/* David Perell Section */}
+          <div className="group cursor-pointer" onClick={() => toggleSection('david-perell')}>
+            <div className="flex items-center justify-between py-3 px-4 border-b border-gray-100 hover:border-gray-200 transition-colors duration-200">
+              <h2 className="text-lg font-medium text-gray-900 group-hover:text-purple-700 transition-colors duration-200">
+                david perell (50 best ideas, condensed)
+              </h2>
+              {expandedSections.includes('david-perell') ? (
+                <ChevronDown className="w-4 h-4 text-purple-600 transition-transform duration-200" />
+              ) : (
+                <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-purple-600 transition-transform duration-200" />
+              )}
+            </div>
+            
+            {expandedSections.includes('david-perell') && (
+              <div className="px-4 py-6 bg-gray-50/50 animate-in slide-in-from-top-2 duration-300">
+                <div className="space-y-3 text-gray-600 text-sm leading-relaxed">
+                  <p>1. Inversion: Avoiding stupidity is easier than trying to be brilliant. Ask, "What can go wrong?" and don't do it.</p>
+                  <p>2. Doublespeak: People often say the opposite of what they mean. "War is peace. Freedom is slavery. Ignorance is strength."</p>
+                  <p>3. Theory of Constraints: Every system has a bottleneck. Fix the weakest point and the whole system improves.</p>
+                  <p>4. Preference Falsification: In public people say one thing, in private they say another.</p>
+                  <p>5. Faustian Bargain: Winning in the short term but losing in the long term.</p>
+                  <p>6. Mimetic Desire: We copy each other's wants. Most desire is imitation.</p>
+                  <p>7. Mimetic Conflict: The more similar people are, the more they fight.</p>
+                  <p>8. Talent vs Genius: Talent hits targets others can't. Genius finds targets others can't see.</p>
+                  <p>9. Competition is for Losers: Don't copy. Work on problems others ignore.</p>
+                  <p>10. Secrets in Plain Sight: Big opportunities are often obvious but overlooked.</p>
+                  <p>11. Never-Ending Now: Social media keeps us trapped in the present and blind to history.</p>
+                  <p>12. Demand Curves Slope Down: The harder or pricier something is, the fewer people will do it.</p>
+                  <p>13. Look for Things That Don't Make Sense: Confusion means your model is wrong. Opportunity hides there.</p>
+                  <p>14. Wisdom of Paradox: The deepest truths are often opposites that are both true.</p>
+                  <p>15. Law of Shitty Click-Through Rates: Every marketing tactic works until it doesn't.</p>
+                  <p>16. Russell Conjugation: Swap a word and you change meaning. "Estate tax" vs "death tax."</p>
+                  <p>17. Opportunity Cost: Saying yes to one thing means saying no to another.</p>
+                  <p>18. Overton Window: Control what ideas are acceptable and you control thought.</p>
+                  <p>19. Planck's Principle: Science advances one funeral at a time.</p>
+                  <p>20. Bike-Shed Effect: People argue over trivial details and ignore what matters.</p>
+                  <p>21. Table Selection: Winning is easier when you choose the right game.</p>
+                  <p>22. Goodhart's Law: When a measure becomes a target, it stops working.</p>
+                  <p>23. Gall's Law: Complex systems that work come from simple systems that worked.</p>
+                  <p>24. Hock Principle: Simple principles lead to smart behavior. Complex rules lead to dumb behavior.</p>
+                  <p>25. Parkinson's Law: Work expands to fill the time you give it.</p>
+                  <p>26. Second Law of Thermodynamics: The world drifts toward disorder. Entropy always wins.</p>
+                  <p>27. Paradox of Specificity: The more specific you are, the more opportunities you create.</p>
+                  <p>28. Emergence: Interactions create outcomes greater than the parts.</p>
+                  <p>29. Occam's Razor: The simplest explanation is usually the right one.</p>
+                  <p>30. Hickam's Dictum: Complex problems often have multiple causes.</p>
+                  <p>31. Hormesis: A little stress helps. A lot destroys.</p>
+                  <p>32. Robustness Principle: Be strict with yourself, generous with others.</p>
+                  <p>33. Legibility: Not everything that counts can be measured.</p>
+                  <p>34. Horseshoe Theory: Extremes resemble each other more than the center.</p>
+                  <p>35. Availability Cascade: Ideas spread because they are popular, not because they are true.</p>
+                  <p>36. Creativity Begins at the Edge: The best ideas start on the margins, not the mainstream.</p>
+                  <p>37. Copernican Principle: We are not special. Earth and humans are tiny in time and space.</p>
+                  <p>38. Personal Monopoly: Become the only person who does what you do.</p>
+                  <p>39. Paradox of Consensus: Too much agreement can mean something is wrong.</p>
+                  <p>40. Penny Problem Gap: Even tiny costs change behavior completely.</p>
+                  <p>41. Invisible Hand: Prices are signals wrapped in incentives.</p>
+                  <p>42. Base Rate: Use averages and probabilities as reality checks.</p>
+                  <p>43. Circle of Competence: Know what you know. Admit what you don't.</p>
+                  <p>44. Convexity: Seek bets with big upside and small downside.</p>
+                  <p>45. Go-For-It Window: Huge opportunities open when technology outpaces culture.</p>
+                  <p>46. Via Negativa: Sometimes subtraction is the best solution.</p>
+                  <p>47. Medium is the Message: The medium shapes society more than the content.</p>
+                  <p>48. Resource Curse: Natural wealth often makes nations weaker, not stronger.</p>
+                  <p>49. Paradox of Abundance: In a world of too much, average quality falls but the best rises.</p>
+                  <p>50. Map is Not the Territory: Models are not reality. The gaps are where you find edges.</p>
+                </div>
+              </div>
+            )}
+          </div>
         </article>
       </div>
     </div>
