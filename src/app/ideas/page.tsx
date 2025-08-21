@@ -61,11 +61,6 @@ export default function FavoriteIdeas() {
       linkText: 'Bill Perkins on Modern Wisdom #642'
     },
     {
-      id: 'what-to-work-on',
-      title: 'what to work on',
-      content: 'The best way to figure out what to work on is to ask yourself what you\'d work on if you were independently wealthy and no one would ever see it. That\'s what you should be working on.'
-    },
-    {
       id: 'compounding-knowledge',
       title: 'curated knowledge (shane parrish)',
       content: [
@@ -83,27 +78,6 @@ export default function FavoriteIdeas() {
       ],
       link: 'https://fs.blog/mental-models/',
       linkText: 'Farnam Street Mental Models'
-    },
-    {
-      id: 'mark-manson',
-      title: 'mark manson',
-      content: [
-        '• You don\'t need a productivity system. You need a bedtime.',
-        '• Eight hours of sleep and a daily walk fix more problems than any guru.',
-        '• The best antidepressant is exercise.',
-        '• If you don\'t choose your priorities, the world will.',
-        '• Your values show up in what you\'re willing to sacrifice.',
-        '• If saying no makes you feel guilty, you were trained to neglect yourself.',
-        '• Most people aren\'t stuck because life is hard. They\'re stuck because distractions feel safer than solutions.',
-        '• Reading more isn\'t progress. Often it\'s procrastination.',
-        '• Do one or two things well. Do them in one place, consistently, with a small group, for years.',
-        '• Confidence and fear are both belief in the future. You\'re choosing fear.',
-        '• Growth comes from failure. Success is just tolerating more of it.',
-        '• You don\'t erase anxiety or self-doubt. You act anyway.',
-        '• Happiness is better problems. Success is better failures. Discipline is better addictions. You don\'t remove struggle, you upgrade it.'
-      ],
-      link: null,
-      linkText: null
     },
     {
       id: 'treadmill-friends',
@@ -209,6 +183,34 @@ export default function FavoriteIdeas() {
       ],
       link: null,
       linkText: null
+    },
+    {
+      id: 'mark-manson',
+      title: 'mark manson',
+      content: [
+        '• You don\'t need a productivity system. You need a bedtime.',
+        '• Eight hours of sleep and a daily walk fix more problems than any guru.',
+        '• The best antidepressant is exercise.',
+        '• If you don\'t choose your priorities, the world will.',
+        '• Your values show up in what you\'re willing to sacrifice.',
+        '• If saying no makes you feel guilty, you were trained to neglect yourself.',
+        '• Most people aren\'t stuck because life is hard. They\'re stuck because distractions feel safer than solutions.',
+        '• Reading more isn\'t progress. Often it\'s procrastination.',
+        '• Do one or two things well. Do them in one place, consistently, with a small group, for years.',
+        '• Confidence and fear are both belief in the future. You\'re choosing fear.',
+        '• Growth comes from failure. Success is just tolerating more of it.',
+        '• You don\'t erase anxiety or self-doubt. You act anyway.',
+        '• Happiness is better problems. Success is better failures. Discipline is better addictions. You don\'t remove struggle, you upgrade it.'
+      ],
+      link: null,
+      linkText: null
+    },
+    {
+      id: 'what-to-work-on',
+      title: 'what to work on',
+      content: 'What you think about in the shower is what you should probably focus on. The better question isn\'t "what do you want?" but "what pain are you willing to go through?" Progress is about struggle. Life is all journey. There is nothing else.',
+      link: 'https://paulgraham.com/greatwork.html',
+      linkText: 'See Paul Graham\'s How to Do Great Work.'
     }
   ];
 
@@ -245,13 +247,13 @@ export default function FavoriteIdeas() {
         <div className="mb-6">
           <div className="relative max-w-md mx-auto px-4 md:px-0">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 md:w-5 md:h-5" />
-            <input
-              type="text"
-              placeholder="Search ideas..."
-              value={searchQuery}
-              onChange={handleSearchChange}
-              className="w-full pl-10 md:pl-12 pr-4 py-3 md:py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white text-base md:text-sm"
-            />
+                               <input
+                     type="text"
+                     placeholder="Search"
+                     value={searchQuery}
+                     onChange={handleSearchChange}
+                     className="w-full pl-10 md:pl-12 pr-4 py-3 md:py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white text-base md:text-sm"
+                   />
           </div>
         </div>
         
