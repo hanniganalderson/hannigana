@@ -32,8 +32,7 @@ export default function Now() {
                              <div className="text-gray-700 leading-relaxed text-sm md:text-base space-y-3">
                  <p>• Finished summer term. Fall starts next month.</p>
                  <p>• Traveling: Phoenix → Sunriver → Puerto Vallarta.</p>
-                 <p>• Reading, podcasts, walking.</p>
-                 <p>• Working on mindfulness.</p>
+                 <p>• Reading, podcasts, walking, mindfulness.</p>
                </div>
             </div>
           </article>
