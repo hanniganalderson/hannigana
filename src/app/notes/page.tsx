@@ -105,9 +105,9 @@ export default function MyIdeas() {
   );
 
   return (
-    <div className="container mx-auto max-w-2xl px-4 py-8 md:py-12 lg:py-20">
+    <div className="container mx-auto max-w-2xl px-4 py-6 md:py-8 lg:py-12">
       {/* Go Back Button */}
-      <div className="mb-6 md:mb-8">
+      <div className="mb-4 md:mb-6">
         <Link
           href="/"
           className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm md:text-base"
@@ -117,75 +117,79 @@ export default function MyIdeas() {
         </Link>
       </div>
       
-      <div className="flex flex-col gap-6 md:gap-8">
+      <div className="flex flex-col gap-4 md:gap-6 lg:gap-8">
         <div className="text-center">
-          <h1 className="text-3xl md:text-4xl font-serif font-bold tracking-tight text-gray-900 mb-2">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold tracking-tight text-gray-900 mb-2">
             my notes
           </h1>
-          <div className="w-16 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+          <div className="w-16 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto"></div>
         </div>
 
         {/* Search Bar */}
-        <div className="mb-6">
+        <div className="mb-4 md:mb-6">
           <div className="relative max-w-md mx-auto px-4 md:px-0">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 md:w-5 md:h-5" />
-                               <input
-                     type="text"
-                     placeholder="Search"
-                     value={searchQuery}
-                     onChange={handleSearchChange}
-                     className="w-full pl-10 md:pl-12 pr-4 py-3 md:py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white text-base md:text-sm"
-                   />
+            <input
+              type="text"
+              placeholder="Search"
+              value={searchQuery}
+              onChange={handleSearchChange}
+              className="w-full pl-10 md:pl-12 pr-4 py-2.5 md:py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white text-sm md:text-base"
+            />
           </div>
         </div>
-        
-        <article className="space-y-4 md:space-y-6">
+
+        {/* Sections */}
+        <div className="space-y-3 md:space-y-4 lg:space-y-6">
           {filteredSections.map((section) => (
-            <div key={section.id} className="group cursor-pointer" onClick={() => toggleSection(section.id)}>
-              <div className="flex items-center justify-between py-4 md:py-3 px-4 md:px-4 border-b border-gray-100 hover:border-gray-200 transition-colors duration-200 min-h-[60px] md:min-h-0">
-                <h2 
-                  className="text-base md:text-lg font-medium text-gray-900 group-hover:text-purple-700 transition-colors duration-200 pr-4"
-                  dangerouslySetInnerHTML={{ 
-                    __html: highlightText(section.title, searchQuery) 
-                  }}
-                />
+            <article
+              key={section.id}
+              className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-gray-200/50 overflow-hidden hover:shadow-xl transition-all duration-200"
+            >
+              <button
+                onClick={() => toggleSection(section.id)}
+                className="w-full px-4 md:px-6 py-3 md:py-4 text-left flex items-center justify-between hover:bg-gray-50/50 transition-colors duration-200"
+              >
+                <h2 className="text-base md:text-lg lg:text-xl font-semibold text-gray-900">
+                  {expandedSections.includes(section.id) ? (
+                    <span dangerouslySetInnerHTML={{ __html: highlightText(section.title, searchQuery) }} />
+                  ) : (
+                    <span dangerouslySetInnerHTML={{ __html: highlightText(section.title, searchQuery) }} />
+                  )}
+                </h2>
                 {expandedSections.includes(section.id) ? (
-                  <ChevronDown className="w-5 h-5 md:w-4 md:h-4 text-purple-600 transition-transform duration-200 flex-shrink-0" />
+                  <ChevronDown className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-500 flex-shrink-0" />
                 ) : (
-                  <ChevronRight className="w-5 h-5 md:w-4 md:h-4 text-gray-400 group-hover:text-purple-600 transition-transform duration-200 flex-shrink-0" />
+                  <ChevronRight className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-500 flex-shrink-0" />
                 )}
-              </div>
+              </button>
               
               {expandedSections.includes(section.id) && (
-                <div className="px-4 md:px-4 py-4 md:py-6 bg-gray-50/50 animate-in slide-in-from-top-2 duration-300">
-                  <div 
-                    className="text-gray-600 mb-4 md:mb-6 leading-relaxed text-sm md:text-sm"
-                    dangerouslySetInnerHTML={{ 
-                      __html: highlightText(section.content, searchQuery) 
-                    }}
-                  />
-                  {section.details && (
-                    <div className="space-y-3 text-gray-700 text-sm">
-                      {section.details.map((detail, index) => (
-                        <div key={index} className="flex items-start gap-3">
-                          <span className="text-purple-600 font-medium text-xs mt-1 flex-shrink-0">
-                            {String(index + 1).padStart(2, '0')}
-                          </span>
-                          <span 
-                            className="leading-relaxed"
-                            dangerouslySetInnerHTML={{ 
-                              __html: highlightText(detail, searchQuery) 
-                            }}
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  )}
+                <div className="px-4 md:px-6 pb-4 md:pb-6">
+                  <div className="text-gray-700 leading-relaxed text-sm md:text-base">
+                    {section.details ? (
+                      <>
+                        <p className="mb-3">{section.content}</p>
+                        <ul className="space-y-2">
+                          {section.details.map((detail, index) => (
+                            <li key={index} className="flex items-start gap-3">
+                              <span className="text-purple-600 font-medium text-xs mt-1 flex-shrink-0">
+                                {String(index + 1).padStart(2, '0')}
+                              </span>
+                              <span dangerouslySetInnerHTML={{ __html: highlightText(detail, searchQuery) }} />
+                            </li>
+                          ))}
+                        </ul>
+                      </>
+                    ) : (
+                      <span dangerouslySetInnerHTML={{ __html: highlightText(section.content, searchQuery) }} />
+                    )}
+                  </div>
                 </div>
               )}
-            </div>
+            </article>
           ))}
-        </article>
+        </div>
       </div>
     </div>
   );
