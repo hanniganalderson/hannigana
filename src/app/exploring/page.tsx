@@ -55,8 +55,8 @@ export default function Exploring() {
       id: 'listening',
       title: 'listening to',
       items: [
-        "Modern Wisdom by Chris Williamson",
-        "Tim Ferriss Show"
+        "Modern Wisdom #780 - Tim Ferriss",
+        "Tim Ferriss Show #668 - Derek Sivers"
       ]
     },
     {

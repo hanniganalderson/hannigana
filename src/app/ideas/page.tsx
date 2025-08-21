@@ -63,9 +63,7 @@ export default function FavoriteIdeas() {
     {
       id: 'what-to-work-on',
       title: 'what to work on',
-      content: 'What you think about in the shower is what you should probably focus on. The better question isn\'t "what do you want?" but "what pain are you willing to go through?" Progress is about struggle. Life is all journey. There is nothing else.',
-      link: 'https://paulgraham.com/greatwork.html',
-      linkText: 'Paul Graham\'s "How to Do Great Work"'
+      content: 'The best way to figure out what to work on is to ask yourself what you\'d work on if you were independently wealthy and no one would ever see it. That\'s what you should be working on.'
     },
     {
       id: 'compounding-knowledge',
@@ -183,6 +181,31 @@ export default function FavoriteIdeas() {
         '50. Map is Not the Territory. All models are wrong, some are useful. Pay attention to what maps leave out.',
         '',
         'Baker\'s Dozen. Delight people with an unexpected bonus. Extra bagel, free chocolate, surprise gift.'
+      ],
+      link: null,
+      linkText: null
+    },
+    {
+      id: 'derek-sivers',
+      title: 'derek sivers',
+      content: [
+        '• Serve the people you want to be around. Your customers become your community.',
+        '• Be a satisficer, not a maximizer. "Good enough" beats endless searching.',
+        '• Optimize one or two things. Be fine at the rest.',
+        '• Almost nothing is objectively true. Beliefs are tools. Rules are games. Accept ideas individually, not ideologies.',
+        '• Useful > true. Keep beliefs that help you act, not ones that are perfectly accurate.',
+        '• What you want now vs what you want most. Shallow happy fades. Deep happy lasts.',
+        '• Say "Hell yeah!" or no. If you\'re not excited, don\'t commit.',
+        '• Business is helping people, not chasing money. Start small, start now.',
+        '• Stay small, stay free. Independence is better than scale.',
+        '• Success is subtraction. The right constraints focus you.',
+        '• Tiny details matter. Small touches make people feel cared for.',
+        'Write out your problem, options, and predicted advice. By the end, the answer is usually obvious. The people you thought were your mentors never even know.',
+        '• Keep learning. Assume you\'re below average so you stay teachable.',
+        '• Solitude powers creativity. Disconnect to focus.',
+        '• Movements need followers. Lead in a way that\'s easy to follow.',
+        '• Don\'t chase status. Chase freedom.',
+        '• Reinvent yourself often. Change is constant.'
       ],
       link: null,
       linkText: null

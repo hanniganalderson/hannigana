@@ -252,7 +252,7 @@ export default function Home() {
                 </Link>
 
                 {/* Favorite Ideas */}
-                <Link href="/favoriteideas" className="block w-full sm:w-auto">
+                <Link href="/ideas" className="block w-full sm:w-auto">
                   <div className="flex items-center justify-center gap-2 px-3 md:px-4 py-2.5 md:py-2 bg-white/90 backdrop-blur-sm border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-purple-600 group text-sm md:text-base relative z-10 hover:scale-105 w-full min-h-[44px] sm:min-h-0">
                     <Lightbulb className="w-4 h-4" />
                     <span>favorite ideas</span>
@@ -260,7 +260,7 @@ export default function Home() {
                 </Link>
 
                 {/* My Notes */}
-                <Link href="/myideas" className="block w-full sm:w-auto">
+                <Link href="/notes" className="block w-full sm:w-auto">
                   <div className="flex items-center justify-center gap-2 px-3 md:px-4 py-2.5 md:py-2 bg-white/90 backdrop-blur-sm border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-purple-600 group text-sm md:text-base relative z-10 hover:scale-105 w-full min-h-[44px] sm:min-h-0">
                     <FileText className="w-4 h-4" />
                     <span>my notes</span>
