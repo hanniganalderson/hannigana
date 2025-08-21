@@ -97,20 +97,28 @@ export default function Home() {
                 <p className="text-gray-700 font-medium mb-2 md:mb-3 text-center text-sm md:text-base">Interested in:</p>
                 <ul className="space-y-2 md:space-y-3">
                   <li className="flex items-start gap-2 md:gap-3">
+                    <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-gradient-to-r from-pink-500 to-blue-500 rounded-full mt-2 flex-shrink-0"></span>
+                    <Link href="/ideas" className="text-blue-600 hover:text-blue-800 transition-colors duration-200 text-sm md:text-base">
+                      decision making
+                    </Link>
+                  </li>
+                  <li className="flex items-start gap-2 md:gap-3">
+                    <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mt-2 flex-shrink-0"></span>
+                    <span className="text-gray-700 text-sm md:text-base">
+                      personal <a href="https://www.highagency.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 transition-colors duration-200">
+                        systems
+                      </a>
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2 md:gap-3">
+                    <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-2 flex-shrink-0"></span>
+                    <span className="text-gray-700 text-sm md:text-base">fitness and nutrition</span>
+                  </li>
+                  <li className="flex items-start gap-2 md:gap-3">
                     <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mt-2 flex-shrink-0"></span>
                     <Link href="/startups" className="text-blue-600 hover:text-blue-800 transition-colors duration-200 text-sm md:text-base">
                       startups
                     </Link>
-                  </li>
-                  <li className="flex items-start gap-2 md:gap-3">
-                    <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-2 flex-shrink-0"></span>
-                    <span className="text-gray-700 text-sm md:text-base group relative cursor-pointer">
-                      real estate
-                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none whitespace-nowrap group-hover:-translate-y-1">
-                        in Bend & Phoenix metro
-                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
-                      </div>
-                    </span>
                   </li>
                   <li className="flex items-start gap-2 md:gap-3">
                     <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-2 flex-shrink-0"></span>
@@ -123,22 +131,14 @@ export default function Home() {
                     </span>
                   </li>
                   <li className="flex items-start gap-2 md:gap-3">
-                    <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-gradient-to-r from-pink-500 to-blue-500 rounded-full mt-2 flex-shrink-0"></span>
-                    <Link href="/favoriteideas" className="text-blue-600 hover:text-blue-800 transition-colors duration-200 text-sm md:text-base">
-                      decision making
-                    </Link>
-                  </li>
-                  <li className="flex items-start gap-2 md:gap-3">
-                    <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mt-2 flex-shrink-0"></span>
-                    <span className="text-gray-700 text-sm md:text-base">
-                      systems for personal <a href="https://www.highagency.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 transition-colors duration-200">
-                        growth
-                      </a>
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2 md:gap-3">
                     <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-2 flex-shrink-0"></span>
-                    <span className="text-gray-700 text-sm md:text-base">fitness and nutrition</span>
+                    <span className="text-gray-700 text-sm md:text-base group relative cursor-pointer">
+                      real estate
+                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none whitespace-nowrap group-hover:-translate-y-1">
+                        in Bend & Phoenix metro
+                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
+                      </div>
+                    </span>
                   </li>
                 </ul>
               </div>
