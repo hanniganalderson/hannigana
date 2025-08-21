@@ -45,6 +45,31 @@ export default function MyIdeas() {
 
   const sections = [
     {
+      id: 'personal-clarity',
+      title: 'personal clarity',
+      content: 'As a kid I expected dread and obligations. Now I see life can be structured how I want. The less I desire, the fewer obligations. Most things can be turned into something I want to do.'
+    },
+    {
+      id: 'fulfillment',
+      title: 'fulfillment',
+      content: 'I realized life boils down to decisions, not dread. Taking risks gives excitement, purpose, and fulfillment. The goal is simple: optimize for fulfillment, for yourself and others.'
+    },
+    {
+      id: 'desire',
+      title: 'desire',
+      content: 'Not wanting something can be as good as having it. The key is to pursue only what you genuinely want and disregard everything else.'
+    },
+    {
+      id: 'mental-compounding',
+      title: 'mental compounding',
+      content: 'Both social media and large language models compound the direction your mind is already pointed.'
+    },
+    {
+      id: 'confidence-eq',
+      title: 'confidence & eq',
+      content: 'Confidence got easier once I realized it\'s more embarrassing to be guarded than just to be myself. High EQ is about the same thing but toward others, making people feel valued and building them up.'
+    },
+    {
       id: 'leaving-house',
       title: 'leaving the house',
       content: 'Whether you want to or not, leaving the house consistently helps in all facets of life. Your environment pushes you more than willpower. Habitually you\'ll be better off.'
@@ -69,31 +94,6 @@ export default function MyIdeas() {
         'Get the $2k AOTC tax credit every year you\'re eligible.',
         'Leverage AI for course planning & financial aid discovery. Generate the right prompt and it will be beyond easy.'
       ]
-    },
-    {
-      id: 'mental-compounding',
-      title: 'mental compounding',
-      content: 'Both social media and large language models compound the direction your mind is already pointed.'
-    },
-    {
-      id: 'confidence-eq',
-      title: 'confidence & eq',
-      content: 'Confidence got easier once I realized it\'s more embarrassing to be guarded than just to be myself. High EQ is about the same thing but toward others, making people feel valued and building them up.'
-    },
-    {
-      id: 'personal-clarity',
-      title: 'personal clarity',
-      content: 'As a kid I expected dread and obligations. Now I see life can be structured how I want. The less I desire, the fewer obligations. Most things can be turned into something I want to do.'
-    },
-    {
-      id: 'fulfillment',
-      title: 'fulfillment',
-      content: 'I realized life boils down to decisions, not dread. Taking risks gives excitement, purpose, and fulfillment. The goal is simple: optimize for fulfillment, for yourself and others.'
-    },
-    {
-      id: 'desire',
-      title: 'desire',
-      content: 'Not wanting something can be as good as having it. The key is to pursue only what you genuinely want and disregard everything else.'
     }
   ];
 

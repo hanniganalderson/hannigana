@@ -124,7 +124,7 @@ export default function Home() {
                     <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-2 flex-shrink-0"></span>
                     <span className="text-gray-700 text-sm md:text-base group relative cursor-pointer">
                       investing
-                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none whitespace-nowrap group-hover:-translate-y-1">
+                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none whitespace-nowrap group-hover:-translate-y-1 z-20">
                         growth stocks & BTC
                         <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
                       </div>
@@ -134,7 +134,7 @@ export default function Home() {
                     <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-2 flex-shrink-0"></span>
                     <span className="text-gray-700 text-sm md:text-base group relative cursor-pointer">
                       real estate
-                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none whitespace-nowrap group-hover:-translate-y-1">
+                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none whitespace-nowrap group-hover:-translate-y-1 z-20">
                         in Bend & Phoenix metro
                         <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
                       </div>
@@ -145,39 +145,52 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Contact Section */}
+          {/* Notes Section */}
           <div className="space-y-3">
-            <h2 className="text-base md:text-lg font-medium text-gray-700 text-center">contact</h2>
             <div className="flex justify-center">
-              <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 p-4 md:p-6 bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl relative overflow-hidden hover:shadow-3xl transition-all duration-500 hover:-translate-y-1 hover:scale-[1.01]">
-                {/* Animated blue outline - very thin */}
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-400 via-blue-500 to-blue-400 bg-[length:400%_100%] animate-gradient-x opacity-35"></div>
+              <div className="flex items-center gap-3 md:gap-4 p-4 md:p-6 bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl relative overflow-hidden hover:shadow-3xl transition-all duration-500 hover:-translate-y-1 hover:scale-[1.01]">
+                {/* Animated purple outline - very thin */}
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-400 via-purple-500 to-purple-400 bg-[length:400%_100%] animate-gradient-x opacity-35"></div>
                 <div className="absolute inset-0.5 rounded-xl bg-white/90 backdrop-blur-sm"></div>
                 
                 {/* Subtle inner glow */}
-                <div className="absolute inset-1 rounded-xl bg-gradient-to-br from-blue-50/8 to-blue-100/8"></div>
+                <div className="absolute inset-1 rounded-xl bg-gradient-to-br from-purple-50/8 to-purple-100/8"></div>
                 
                 {/* Layered shadows for depth */}
-                <div className="absolute inset-0 rounded-xl shadow-[0_3px_15px_rgba(59,130,246,0.12)]"></div>
+                <div className="absolute inset-0 rounded-xl shadow-[0_3px_15px_rgba(147,51,234,0.12)]"></div>
                 <div className="absolute inset-0 rounded-xl shadow-[0_6px_20px_rgba(0,0,0,0.08)]"></div>
                 
-                <a
-                  href="https://linkedin.com/in/hanniganalderson"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 px-3 md:px-4 py-2.5 md:py-2 bg-white/90 backdrop-blur-sm border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-blue-700 group text-sm md:text-base relative z-10 hover:scale-105 w-full sm:w-auto min-h-[44px] sm:min-h-0"
-                >
-                  <Linkedin className="w-4 h-4" />
-                  <span>linkedin</span>
-                </a>
-                
-                <a
-                  href="mailto:hi@hannigana.com"
-                  className="flex items-center justify-center gap-2 px-3 md:px-4 py-2.5 md:py-2 bg-white/90 backdrop-blur-sm border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-blue-700 group text-sm md:text-base relative z-10 hover:scale-105 w-full sm:w-auto min-h-[44px] sm:min-h-0"
-                >
-                  <Mail className="w-4 h-4" />
-                  <span>hi@hannigana.com</span>
-                </a>
+                {/* Now */}
+                <Link href="/now" className="block">
+                  <div className="flex items-center justify-center gap-2 px-3 md:px-4 py-2.5 md:py-2 bg-white/90 backdrop-blur-sm border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-purple-600 group text-sm md:text-base relative z-10 hover:scale-105 min-h-[44px] sm:min-h-0">
+                    <Calendar className="w-4 h-4" />
+                    <span>now</span>
+                  </div>
+                </Link>
+
+                                  {/* Learning */}
+                  <Link href="/learning" className="block">
+                  <div className="flex items-center justify-center gap-2 px-3 md:px-4 py-2.5 md:py-2 bg-white/90 backdrop-blur-sm border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-purple-600 group text-sm md:text-base relative z-10 hover:scale-105 min-h-[44px] sm:min-h-0">
+                    <BookOpen className="w-4 h-4" />
+                    <span>learning</span>
+                  </div>
+                </Link>
+
+                {/* Favorite Ideas */}
+                <Link href="/ideas" className="block">
+                  <div className="flex items-center justify-center gap-2 px-3 md:px-4 py-2.5 md:py-2 bg-white/90 backdrop-blur-sm border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-purple-600 group text-sm md:text-base relative z-10 hover:scale-105 min-h-[44px] sm:min-h-0">
+                    <Lightbulb className="w-4 h-4" />
+                    <span>favorite ideas</span>
+                  </div>
+                </Link>
+
+                {/* My Notes */}
+                <Link href="/notes" className="block">
+                  <div className="flex items-center justify-center gap-2 px-3 md:px-4 py-2.5 md:py-2 bg-white/90 backdrop-blur-sm border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-purple-600 group text-sm md:text-base relative z-10 hover:scale-105 min-h-[44px] sm:min-h-0">
+                    <FileText className="w-4 h-4" />
+                    <span>my notes</span>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -227,45 +240,39 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Notes Section */}
+          {/* Contact Section */}
           <div className="space-y-3">
-            <h2 className="text-base md:text-lg font-medium text-gray-700 text-center">notes</h2>
+            <h2 className="text-base md:text-lg font-medium text-gray-700 text-center">contact</h2>
             <div className="flex justify-center">
               <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 p-4 md:p-6 bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl relative overflow-hidden hover:shadow-3xl transition-all duration-500 hover:-translate-y-1 hover:scale-[1.01]">
-                {/* Animated purple outline - very thin */}
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-400 via-purple-500 to-purple-400 bg-[length:400%_100%] animate-gradient-x opacity-35"></div>
+                {/* Animated blue outline - very thin */}
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-400 via-blue-500 to-blue-400 bg-[length:400%_100%] animate-gradient-x opacity-35"></div>
                 <div className="absolute inset-0.5 rounded-xl bg-white/90 backdrop-blur-sm"></div>
                 
                 {/* Subtle inner glow */}
-                <div className="absolute inset-1 rounded-xl bg-gradient-to-br from-purple-50/8 to-purple-100/8"></div>
+                <div className="absolute inset-1 rounded-xl bg-gradient-to-br from-blue-50/8 to-blue-100/8"></div>
                 
                 {/* Layered shadows for depth */}
-                <div className="absolute inset-0 rounded-xl shadow-[0_3px_15px_rgba(147,51,234,0.12)]"></div>
+                <div className="absolute inset-0 rounded-xl shadow-[0_3px_15px_rgba(59,130,246,0.12)]"></div>
                 <div className="absolute inset-0 rounded-xl shadow-[0_6px_20px_rgba(0,0,0,0.08)]"></div>
                 
-                {/* Reading & Listening */}
-                <Link href="/exploring" className="block w-full sm:w-auto">
-                  <div className="flex items-center justify-center gap-2 px-3 md:px-4 py-2.5 md:py-2 bg-white/90 backdrop-blur-sm border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-purple-600 group text-sm md:text-base relative z-10 hover:scale-105 w-full min-h-[44px] sm:min-h-0">
-                    <BookOpen className="w-4 h-4" />
-                    <span>reading & listening</span>
-                  </div>
-                </Link>
-
-                {/* Favorite Ideas */}
-                <Link href="/ideas" className="block w-full sm:w-auto">
-                  <div className="flex items-center justify-center gap-2 px-3 md:px-4 py-2.5 md:py-2 bg-white/90 backdrop-blur-sm border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-purple-600 group text-sm md:text-base relative z-10 hover:scale-105 w-full min-h-[44px] sm:min-h-0">
-                    <Lightbulb className="w-4 h-4" />
-                    <span>favorite ideas</span>
-                  </div>
-                </Link>
-
-                {/* My Notes */}
-                <Link href="/notes" className="block w-full sm:w-auto">
-                  <div className="flex items-center justify-center gap-2 px-3 md:px-4 py-2.5 md:py-2 bg-white/90 backdrop-blur-sm border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-purple-600 group text-sm md:text-base relative z-10 hover:scale-105 w-full min-h-[44px] sm:min-h-0">
-                    <FileText className="w-4 h-4" />
-                    <span>my notes</span>
-                  </div>
-                </Link>
+                <a
+                  href="https://linkedin.com/in/hanniganalderson"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 px-3 md:px-4 py-2.5 md:py-2 bg-white/90 backdrop-blur-sm border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-blue-700 group text-sm md:text-base relative z-10 hover:scale-105 w-full sm:w-auto min-h-[44px] sm:min-h-0"
+                >
+                  <Linkedin className="w-4 h-4" />
+                  <span>linkedin</span>
+                </a>
+                
+                <a
+                  href="mailto:hi@hannigana.com"
+                  className="flex items-center justify-center gap-2 px-3 md:px-4 py-2.5 md:py-2 bg-white/90 backdrop-blur-sm border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-blue-700 group text-sm md:text-base relative z-10 hover:scale-105 w-full sm:w-auto min-h-[44px] sm:min-h-0"
+                >
+                  <Mail className="w-4 h-4" />
+                  <span>hi@hannigana.com</span>
+                </a>
               </div>
             </div>
           </div>

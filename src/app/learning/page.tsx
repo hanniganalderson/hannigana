@@ -53,7 +53,7 @@ export default function Exploring() {
     },
     {
       id: 'listening',
-      title: 'listening to',
+      title: 'listening',
       items: [
         "Modern Wisdom #780 - Tim Ferriss",
         "Tim Ferriss Show #668 - Derek Sivers"
@@ -136,9 +136,9 @@ export default function Exploring() {
       <div className="flex flex-col gap-6 md:gap-8">
         <div className="text-center">
           <h1 className="text-3xl md:text-4xl font-serif font-bold tracking-tight text-gray-900 mb-2">
-            reading/listening
+            learning
           </h1>
-          <div className="w-16 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+          <div className="w-16 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto"></div>
         </div>
 
         {/* Search Bar */}
