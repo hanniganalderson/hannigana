@@ -26,13 +26,12 @@ export default function Startups() {
         
         <div className="space-y-4 md:space-y-6">
           <div className="bg-white/95 backdrop-blur-sm shadow-lg rounded-xl p-4 md:p-6 border border-gray-200">
-            <h2 className="text-base md:text-lg text-gray-600 mb-4 md:mb-4 text-center">content i like</h2>
             <div className="space-y-2 md:space-y-3">
               <a 
                 href="https://paulgraham.com/greatwork.html" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="block p-3 md:p-4 bg-gray-50/80 hover:bg-gray-100/80 rounded-lg transition-all duration-200 group hover:shadow-sm border border-gray-200/50 hover:border-purple-300/50 hover:-translate-y-0.5"
+                className="block p-3 md:p-4 bg-gray-50/80 hover:bg-gray-100/80 rounded-xl transition-all duration-200 group hover:shadow-sm border border-gray-200/50 hover:border-purple-300/50 hover:-translate-y-0.5"
               >
                 <span className="text-gray-700 font-medium group-hover:text-purple-700 transition-colors duration-200">Great Work</span>
               </a>
@@ -41,7 +40,7 @@ export default function Startups() {
                 href="https://paulgraham.com/love.html" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="block p-3 md:p-4 bg-gray-50/80 hover:bg-gray-100/80 rounded-lg transition-all duration-200 group hover:shadow-sm border border-gray-200/50 hover:border-purple-300/50 hover:-translate-y-0.5"
+                className="block p-3 md:p-4 bg-gray-50/80 hover:bg-gray-100/80 rounded-xl transition-all duration-200 group hover:shadow-sm border border-gray-200/50 hover:border-purple-300/50 hover:-translate-y-0.5"
               >
                 <span className="text-gray-700 font-medium group-hover:text-purple-700 transition-colors duration-200">Love</span>
               </a>
@@ -50,7 +49,7 @@ export default function Startups() {
                 href="https://paulgraham.com/ds.html" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="block p-3 md:p-4 bg-gray-50/80 hover:bg-gray-100/80 rounded-lg transition-all duration-200 group hover:shadow-sm border border-gray-200/50 hover:border-purple-300/50 hover:-translate-y-0.5"
+                className="block p-3 md:p-4 bg-gray-50/80 hover:bg-gray-100/80 rounded-xl transition-all duration-200 group hover:shadow-sm border border-gray-200/50 hover:border-purple-300/50 hover:-translate-y-0.5"
               >
                 <span className="text-gray-700 font-medium group-hover:text-purple-700 transition-colors duration-200">Do Things That Don't Scale</span>
               </a>
@@ -59,7 +58,7 @@ export default function Startups() {
                 href="https://paulgraham.com/growth.html" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="block p-3 md:p-4 bg-gray-50/80 hover:bg-gray-100/80 rounded-lg transition-all duration-200 group hover:shadow-sm border border-gray-200/50 hover:border-purple-300/50 hover:-translate-y-0.5"
+                className="block p-3 md:p-4 bg-gray-50/80 hover:bg-gray-100/80 rounded-xl transition-all duration-200 group hover:shadow-sm border border-gray-200/50 hover:border-purple-300/50 hover:-translate-y-0.5"
               >
                 <span className="text-gray-700 font-medium group-hover:text-purple-700 transition-colors duration-200">Startup = Growth</span>
               </a>
@@ -68,7 +67,7 @@ export default function Startups() {
                 href="https://paulgraham.com/when.html" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="block p-3 md:p-4 bg-gray-50/80 hover:bg-gray-100/80 rounded-lg transition-all duration-200 group hover:shadow-sm border border-gray-200/50 hover:border-purple-300/50 hover:-translate-y-0.5"
+                className="block p-3 md:p-4 bg-gray-50/80 hover:bg-gray-100/80 rounded-xl transition-all duration-200 group hover:shadow-sm border border-gray-200/50 hover:border-purple-300/50 hover:-translate-y-0.5"
               >
                 <span className="text-gray-700 font-medium group-hover:text-purple-700 transition-colors duration-200">When to Start a Startup</span>
               </a>
@@ -77,7 +76,7 @@ export default function Startups() {
                 href="https://open.spotify.com/episode/1rUbCbidC2eigLzm4A6ucg?si=0fb50bbb5c9041ee" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="block p-3 md:p-4 bg-gray-50/80 hover:bg-gray-100/80 rounded-lg transition-all duration-200 group hover:shadow-sm border border-gray-200/50 hover:border-purple-300/50 hover:-translate-y-0.5"
+                className="block p-3 md:p-4 bg-gray-50/80 hover:bg-gray-100/80 rounded-xl transition-all duration-200 group hover:shadow-sm border border-gray-200/50 hover:border-purple-300/50 hover:-translate-y-0.5"
               >
                 <span className="text-gray-700 font-medium group-hover:text-purple-700 transition-colors duration-200">Founders - Steve Jobs Episode</span>
               </a>

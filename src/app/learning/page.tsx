@@ -48,7 +48,8 @@ export default function Exploring() {
       title: 'reading',
       items: [
         "Clear Thinking by Shane Parrish",
-        "The Almanack of Naval Ravikant (always re-reading)"
+        "Fluke by Brian Klaas",
+        "Recursion by Blake Crouch"
       ]
     },
     {
@@ -98,16 +99,7 @@ export default function Exploring() {
         "The Algebra of Wealth by Scott Galloway",
         "Zero to One by Peter Thiel",
         "Elon Musk by Ashlee Vance",
-        "Anthology of Balaji by Balaji Srinivasan",
-        "Hackers and Painters by Paul Graham",
-        "The Everything Store by Brad Stone",
-        "The Hitchhiker's Guide to the Galaxy by Douglas Adams",
-        "Steve Jobs by Walter Isaacson",
-        "Elon Musk by Walter Isaacson",
-        "Poor Charlie's Almanack by Charlie Munger",
-        "Am I Being Too Subtle by Sam Zell",
-        "The Bitcoin Standard by Saifedean Ammous",
-        "Same as Ever by Morgan Housel"
+        "Dark Matter by Blake Crouch"
       ]
     }
   ];
@@ -156,17 +148,17 @@ export default function Exploring() {
         </div>
 
         {/* Sections */}
-        <div className="space-y-3 md:space-y-4 lg:space-y-6">
+        <div className="space-y-4 md:space-y-5">
           {filteredSections.map((section) => (
             <article
               key={section.id}
-              className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-gray-200/50 overflow-hidden hover:shadow-xl transition-all duration-200"
+              className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-all duration-300 group"
             >
               <button
                 onClick={() => toggleSection(section.id)}
-                className="w-full px-4 md:px-6 py-3 md:py-4 text-left flex items-center justify-between hover:bg-gray-50/50 transition-colors duration-200"
+                className="w-full px-6 md:px-8 py-5 md:py-6 text-left flex items-center justify-between hover:bg-gray-50/30 transition-all duration-300 border-b border-gray-50"
               >
-                <h2 className="text-base md:text-lg lg:text-xl font-semibold text-gray-900">
+                <h2 className="text-lg md:text-xl font-medium text-gray-800 group-hover:text-gray-900 transition-colors">
                   {expandedSections.includes(section.id) ? (
                     <span dangerouslySetInnerHTML={{ __html: highlightText(section.title, searchQuery) }} />
                   ) : (
@@ -174,21 +166,24 @@ export default function Exploring() {
                   )}
                 </h2>
                 {expandedSections.includes(section.id) ? (
-                  <ChevronDown className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-500 flex-shrink-0" />
+                  <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-300" />
                 ) : (
-                  <ChevronRight className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-500 flex-shrink-0" />
+                  <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-gray-500 flex-shrink-0 transition-transform duration-300" />
                 )}
               </button>
               
               {expandedSections.includes(section.id) && (
-                <div className="px-4 md:px-6 pb-3 md:pb-4">
-                  <div className="text-gray-700 leading-relaxed text-sm md:text-base">
+                <div className="px-6 md:px-8 py-6 md:py-8 bg-gray-50/30">
+                  <div className="text-gray-700 leading-relaxed text-sm md:text-base space-y-3">
                     {section.items.map((item, index) => (
-                      <div key={index} className="mb-1.5 last:mb-0 flex items-start gap-3">
-                        <span className="text-purple-600 font-medium text-xs mt-1 flex-shrink-0">
+                      <div key={index} className="flex items-start gap-4 group/item">
+                        <span className="text-purple-500 font-medium text-sm mt-0.5 flex-shrink-0">
                           {String(index + 1).padStart(2, '0')}
                         </span>
-                        <span dangerouslySetInnerHTML={{ __html: highlightText(item, searchQuery) }} />
+                        <span 
+                          className="text-gray-700 leading-relaxed"
+                          dangerouslySetInnerHTML={{ __html: highlightText(item, searchQuery) }} 
+                        />
                       </div>
                     ))}
                   </div>

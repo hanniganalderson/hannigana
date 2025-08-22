@@ -148,7 +148,7 @@ export default function Home() {
           {/* Notes Section */}
           <div className="space-y-3">
             <div className="flex justify-center">
-              <div className="flex flex-col items-center gap-3 md:gap-4 p-4 md:p-6 bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl relative overflow-hidden hover:shadow-3xl transition-all duration-500 hover:-translate-y-1 hover:scale-[1.01]">
+              <div className="flex flex-col md:flex-row items-center gap-3 md:gap-4 p-4 md:p-6 bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl relative overflow-hidden hover:shadow-3xl transition-all duration-500 hover:-translate-y-1 hover:scale-[1.01]">
                 {/* Animated purple outline - very thin */}
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-400 via-purple-500 to-purple-400 bg-[length:400%_100%] animate-gradient-x opacity-35"></div>
                 <div className="absolute inset-0.5 rounded-xl bg-white/90 backdrop-blur-sm"></div>
@@ -161,7 +161,7 @@ export default function Home() {
                 <div className="absolute inset-0 rounded-xl shadow-[0_6px_20px_rgba(0,0,0,0.08)]"></div>
                 
                 {/* Now */}
-                <Link href="/now" className="block w-full">
+                <Link href="/now" className="block w-full md:w-auto">
                   <div className="flex items-center justify-center gap-2 px-3 md:px-4 py-2.5 md:py-2 bg-white/90 backdrop-blur-sm border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-purple-600 group text-sm md:text-base relative z-10 hover:scale-105 min-h-[44px] sm:min-h-0 w-full">
                     <Calendar className="w-4 h-4" />
                     <span>now</span>
@@ -169,7 +169,7 @@ export default function Home() {
                 </Link>
 
                 {/* Learning */}
-                <Link href="/learning" className="block w-full">
+                <Link href="/learning" className="block w-full md:w-auto">
                   <div className="flex items-center justify-center gap-2 px-3 md:px-4 py-2.5 md:py-2 bg-white/90 backdrop-blur-sm border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-purple-600 group text-sm md:text-base relative z-10 hover:scale-105 min-h-[44px] sm:min-h-0 w-full">
                     <BookOpen className="w-4 h-4" />
                     <span>learning</span>
@@ -177,7 +177,7 @@ export default function Home() {
                 </Link>
 
                 {/* Favorite Ideas */}
-                <Link href="/ideas" className="block w-full">
+                <Link href="/ideas" className="block w-full md:w-auto">
                   <div className="flex items-center justify-center gap-2 px-3 md:px-4 py-2.5 md:py-2 bg-white/90 backdrop-blur-sm border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-purple-600 group text-sm md:text-base relative z-10 hover:scale-105 min-h-[44px] sm:min-h-0 w-full">
                     <Lightbulb className="w-4 h-4" />
                     <span>favorite ideas</span>
@@ -185,7 +185,7 @@ export default function Home() {
                 </Link>
 
                 {/* My Notes */}
-                <Link href="/notes" className="block w-full">
+                <Link href="/notes" className="block w-full md:w-auto">
                   <div className="flex items-center justify-center gap-2 px-3 md:px-4 py-2.5 md:py-2 bg-white/90 backdrop-blur-sm border border-gray-200 hover:shadow-md rounded-lg transition-all duration-200 text-gray-700 hover:text-purple-600 group text-sm md:text-base relative z-10 hover:scale-105 min-h-[44px] sm:min-h-0 w-full">
                     <FileText className="w-4 h-4" />
                     <span>my notes</span>

@@ -188,19 +188,32 @@ export default function FavoriteIdeas() {
       id: 'mark-manson',
       title: 'mark manson',
       content: [
-        '• You don\'t need a productivity system. You need a bedtime.',
+        '• You do not need a productivity system. You need a bedtime.',
         '• Eight hours of sleep and a daily walk fix more problems than any guru.',
         '• The best antidepressant is exercise.',
-        '• If you don\'t choose your priorities, the world will.',
-        '• Your values show up in what you\'re willing to sacrifice.',
+        '• If you do not choose your priorities, the world will.',
+        '• Your values show in what you are willing to sacrifice.',
+        '• Everyone suffers. The only question is which problems are worth it.',
+        '• Pick values you can control like growth, honesty, responsibility. Reject shallow ones like status and popularity.',
+        '• Responsibility beats blame. You cannot control everything, but you control your response.',
+        '• Uncertainty is permanent. Certainty seeking is ego protection. Growth comes from updating what you believe.',
+        '• Death is the ultimate filter. If you would regret it on your deathbed, stop giving it attention now.',
+        '• Rejection is good. It clears the wrong paths fast. Boundaries make relationships thrive.',
+        '• Pain equals growth. Avoiding pain keeps you weak. Voluntary struggle builds resilience.',
+        '• Confidence and fear are both belief in the future. You are choosing fear.',
+        '• Growth comes from failure. Success is tolerating more of it.',
+        '• You do not erase anxiety or self doubt. You act anyway.',
+        '• Happiness is better problems. Success is better failures. Discipline is better addictions. You do not remove struggle, you upgrade it.',
         '• If saying no makes you feel guilty, you were trained to neglect yourself.',
-        '• Most people aren\'t stuck because life is hard. They\'re stuck because distractions feel safer than solutions.',
-        '• Reading more isn\'t progress. Often it\'s procrastination.',
+        '• Most people are not stuck because life is hard. They are stuck because distractions feel safer than solutions.',
+        '• Reading more is not progress. Often it is procrastination.',
         '• Do one or two things well. Do them in one place, consistently, with a small group, for years.',
-        '• Confidence and fear are both belief in the future. You\'re choosing fear.',
-        '• Growth comes from failure. Success is just tolerating more of it.',
-        '• You don\'t erase anxiety or self-doubt. You act anyway.',
-        '• Happiness is better problems. Success is better failures. Discipline is better addictions. You don\'t remove struggle, you upgrade it.'
+        '• Attract women by being honest. Radical honesty filters fast. Hiding repels.',
+        '• Neediness is poison. Confidence is acting without needing a result.',
+        '• Vulnerability is power. Most men fake it. Being real signals strength.',
+        '• Improve your value. Fitness, purpose, social skills. Attraction is about who you are, not tricks.',
+        '• Abundance mindset. There are always more women, more opportunities, more everything. Scarcity makes you weak.',
+        '• Relationships are not won. You align values and build together. Anything else collapses.'
       ],
       link: null,
       linkText: null
@@ -258,17 +271,17 @@ export default function FavoriteIdeas() {
         </div>
 
         {/* Sections */}
-        <div className="space-y-3 md:space-y-4 lg:space-y-6">
+        <div className="space-y-4 md:space-y-5">
           {filteredSections.map((section) => (
             <article
               key={section.id}
-              className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-gray-200/50 overflow-hidden hover:shadow-xl transition-all duration-200"
+              className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-all duration-300 group"
             >
               <button
                 onClick={() => toggleSection(section.id)}
-                className="w-full px-4 md:px-6 py-3 md:py-4 text-left flex items-center justify-between hover:bg-gray-50/50 transition-colors duration-200"
+                className="w-full px-6 md:px-8 py-4 md:py-5 text-left flex items-center justify-between hover:bg-gray-50/30 transition-all duration-300 border-b border-gray-50"
               >
-                <h2 className="text-base md:text-lg lg:text-xl font-semibold text-gray-900">
+                <h2 className="text-lg md:text-xl font-medium text-gray-800 group-hover:text-gray-900 transition-colors">
                   {expandedSections.includes(section.id) ? (
                     <span dangerouslySetInnerHTML={{ __html: highlightText(section.title, searchQuery) }} />
                   ) : (
@@ -276,15 +289,15 @@ export default function FavoriteIdeas() {
                   )}
                 </h2>
                 {expandedSections.includes(section.id) ? (
-                  <ChevronDown className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-500 flex-shrink-0" />
+                  <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-300" />
                 ) : (
-                  <ChevronRight className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-500 flex-shrink-0" />
+                  <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-gray-500 flex-shrink-0 transition-transform duration-300" />
                 )}
               </button>
               
               {expandedSections.includes(section.id) && (
-                <div className="px-4 md:px-6 pb-3 md:pb-4">
-                  <div className="text-gray-700 leading-relaxed text-sm md:text-base">
+                <div className="px-6 md:px-8 py-6 md:py-8 bg-gray-50/30">
+                  <div className="text-gray-700 leading-relaxed text-sm md:text-base space-y-4">
                     {Array.isArray(section.content) ? (
                       section.content.map((item, index) => {
                         // Check if this section should use numbered format
@@ -292,34 +305,37 @@ export default function FavoriteIdeas() {
                         
                         if (useNumberedFormat) {
                           return (
-                            <div key={index} className="mb-1.5 last:mb-0 flex items-start gap-3">
-                              <span className="text-purple-600 font-medium text-xs mt-1 flex-shrink-0">
+                            <div key={index} className="flex items-start gap-4 group/item">
+                              <span className="text-purple-500 font-medium text-sm mt-0.5 flex-shrink-0">
                                 {String(index + 1).padStart(2, '0')}
                               </span>
-                              <span dangerouslySetInnerHTML={{ __html: highlightText(item, searchQuery) }} />
+                              <span 
+                                className="text-gray-700 leading-relaxed"
+                                dangerouslySetInnerHTML={{ __html: highlightText(item, searchQuery) }} 
+                              />
                             </div>
                           );
                         } else {
-                          // Use bullet points for other sections
+                          // Use regular content without extra bullet points
                           return (
-                            <div key={index} className="mb-1.5 last:mb-0">
+                            <div key={index} className="text-gray-700 leading-relaxed">
                               <span dangerouslySetInnerHTML={{ __html: highlightText(item, searchQuery) }} />
                             </div>
                           );
                         }
                       })
                     ) : (
-                      <div className="mb-1.5">
+                      <div className="text-gray-700 leading-relaxed">
                         <span dangerouslySetInnerHTML={{ __html: highlightText(section.content, searchQuery) }} />
                       </div>
                     )}
                     {section.link && (
-                      <div className="mt-3 pt-3 border-t border-gray-200">
+                      <div className="mt-6 pt-5 border-t border-gray-200">
                         <a
                           href={section.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-800 transition-colors duration-200 text-sm md:text-base"
+                          className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 transition-colors duration-200 text-sm font-medium"
                         >
                           <span>{section.linkText}</span>
                           <ExternalLink className="w-4 h-4" />
