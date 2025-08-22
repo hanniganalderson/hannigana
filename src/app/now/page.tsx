@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Clock } from "lucide-react";
 import Link from "next/link";
 
 export default function Now() {
@@ -23,6 +23,12 @@ export default function Now() {
             now
           </h1>
           <div className="w-16 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto"></div>
+          
+          {/* Last Updated */}
+          <div className="flex items-center justify-center gap-2 mt-4 text-sm text-gray-500">
+            <Clock className="w-4 h-4" />
+            <span>last updated august 22, 2025</span>
+          </div>
         </div>
 
         {/* Content */}
@@ -30,9 +36,8 @@ export default function Now() {
           <article className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-gray-200/50 overflow-hidden">
             <div className="px-4 md:px-6 lg:px-8 py-4 md:py-6 lg:py-8">
               <div className="text-gray-700 leading-relaxed text-sm md:text-base space-y-2 md:space-y-3">
-                <p>• Finished summer term. Fall starts next month.</p>
                 <p>• Traveling: Phoenix → Sunriver → Puerto Vallarta.</p>
-                <p>• Reading, podcasts, walking, mindfulness.</p>
+                <p>• Reading fiction, podcasts, walking.</p>
               </div>
             </div>
           </article>

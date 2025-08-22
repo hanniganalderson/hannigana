@@ -134,7 +134,7 @@ export default function MyIdeas() {
               placeholder="Search"
               value={searchQuery}
               onChange={handleSearchChange}
-              className="w-full pl-10 md:pl-12 pr-4 py-2.5 md:py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white text-sm md:text-base"
+              className="w-full pl-10 md:pl-12 pr-4 py-2 md:py-2.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white text-sm md:text-base"
             />
           </div>
         </div>
@@ -165,12 +165,12 @@ export default function MyIdeas() {
               </button>
               
               {expandedSections.includes(section.id) && (
-                <div className="px-4 md:px-6 pb-4 md:pb-6">
+                <div className="px-4 md:px-6 pb-3 md:pb-4">
                   <div className="text-gray-700 leading-relaxed text-sm md:text-base">
                     {section.details ? (
                       <>
                         <p className="mb-3">{section.content}</p>
-                        <ul className="space-y-2">
+                        <ul className="space-y-1.5">
                           {section.details.map((detail, index) => (
                             <li key={index} className="flex items-start gap-3">
                               <span className="text-purple-600 font-medium text-xs mt-1 flex-shrink-0">

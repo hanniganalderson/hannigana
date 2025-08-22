@@ -252,7 +252,7 @@ export default function FavoriteIdeas() {
               placeholder="Search"
               value={searchQuery}
               onChange={handleSearchChange}
-              className="w-full pl-10 md:pl-12 pr-4 py-2.5 md:py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white text-sm md:text-base"
+              className="w-full pl-10 md:pl-12 pr-4 py-2 md:py-2.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white text-sm md:text-base"
             />
           </div>
         </div>
@@ -283,16 +283,33 @@ export default function FavoriteIdeas() {
               </button>
               
               {expandedSections.includes(section.id) && (
-                <div className="px-4 md:px-6 pb-4 md:pb-6">
+                <div className="px-4 md:px-6 pb-3 md:pb-4">
                   <div className="text-gray-700 leading-relaxed text-sm md:text-base">
                     {Array.isArray(section.content) ? (
-                      section.content.map((item, index) => (
-                        <div key={index} className="mb-2 last:mb-0">
-                          <span dangerouslySetInnerHTML={{ __html: highlightText(item, searchQuery) }} />
-                        </div>
-                      ))
+                      section.content.map((item, index) => {
+                        // Check if this section should use numbered format
+                        const useNumberedFormat = section.id === 'david-perell';
+                        
+                        if (useNumberedFormat) {
+                          return (
+                            <div key={index} className="mb-1.5 last:mb-0 flex items-start gap-3">
+                              <span className="text-purple-600 font-medium text-xs mt-1 flex-shrink-0">
+                                {String(index + 1).padStart(2, '0')}
+                              </span>
+                              <span dangerouslySetInnerHTML={{ __html: highlightText(item, searchQuery) }} />
+                            </div>
+                          );
+                        } else {
+                          // Use bullet points for other sections
+                          return (
+                            <div key={index} className="mb-1.5 last:mb-0">
+                              <span dangerouslySetInnerHTML={{ __html: highlightText(item, searchQuery) }} />
+                            </div>
+                          );
+                        }
+                      })
                     ) : (
-                      <div className="mb-2">
+                      <div className="mb-1.5">
                         <span dangerouslySetInnerHTML={{ __html: highlightText(section.content, searchQuery) }} />
                       </div>
                     )}
