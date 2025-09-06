@@ -10,7 +10,6 @@ const lora = Lora({ subsets: ["latin"], variable: "--font-lora" });
 
 export const metadata: Metadata = {
   title: "Hannigan Alderson",
-  description: "Computer Science student, podcast host, and aspiring investor.",
   keywords: ["Hannigan Alderson", "Computer Science", "Podcast Host", "Investor", "Entrepreneur", "SquidTalk", "Outliers"],
   authors: [{ name: "Hannigan Alderson" }],
   creator: "Hannigan Alderson",
@@ -22,13 +21,12 @@ export const metadata: Metadata = {
     url: "https://hannigana.com",
     siteName: "Hannigan Alderson",
     title: "Hannigan Alderson",
-    description: "Computer Science student, podcast host, and aspiring investor.",
     images: [
       {
         url: "/profile.png",
         width: 1200,
         height: 630,
-        alt: "Hannigan Alderson - Computer Science student, podcast host, and aspiring investor",
+        alt: "Hannigan Alderson",
       },
     ],
   },
@@ -37,7 +35,6 @@ export const metadata: Metadata = {
     site: "@hannigana",
     creator: "@hannigana",
     title: "Hannigan Alderson",
-    description: "Computer Science student, podcast host, and aspiring investor.",
     images: ["/profile.png"],
   },
   viewport: "width=device-width, initial-scale=1",
