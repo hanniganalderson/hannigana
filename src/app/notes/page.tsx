@@ -141,10 +141,10 @@ export default function MyIdeas() {
       
       <div className="flex flex-col gap-4 md:gap-6 lg:gap-8">
         <div className="text-center">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold tracking-tight text-gray-900 mb-2">
+          <h1 className="text-lg md:text-xl font-medium text-gray-900 mb-2">
             my notes
           </h1>
-          <div className="w-16 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto"></div>
+          <div className="w-12 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto"></div>
         </div>
 
         {/* Search Bar */}
@@ -170,10 +170,10 @@ export default function MyIdeas() {
             >
               <button
                 onClick={() => toggleSection(section.id)}
-                className="w-full px-6 md:px-8 py-4 md:py-5 text-left flex items-center justify-between hover:bg-gray-50/30 transition-all duration-300 border-b border-gray-50"
+                className="w-full px-4 md:px-4 py-4 md:py-3 text-left flex items-center justify-between hover:bg-gray-50/30 transition-all duration-300 border-b border-gray-50"
               >
                 <div className="flex flex-col items-start">
-                  <h2 className="text-lg md:text-xl font-medium text-gray-800 group-hover:text-gray-900 transition-colors">
+                  <h2 className="text-sm md:text-base font-medium text-gray-800 group-hover:text-gray-900 transition-colors">
                     {expandedSections.includes(section.id) ? (
                       <span dangerouslySetInnerHTML={{ __html: highlightText(section.title, searchQuery) }} />
                     ) : (
@@ -192,16 +192,16 @@ export default function MyIdeas() {
               </button>
               
               {expandedSections.includes(section.id) && (
-                <div className="px-6 md:px-8 py-6 md:py-8 bg-gray-50/30">
-                  <div className="text-gray-700 leading-relaxed text-sm md:text-base space-y-4">
+                <div className="px-4 md:px-4 py-4 md:py-6 bg-gray-50/30">
+                  <div className="text-gray-700 leading-relaxed text-xs md:text-sm space-y-3">
                     {section.details ? (
                       <>
                         <p className="text-gray-700 leading-relaxed mb-4">
                           <span dangerouslySetInnerHTML={{ __html: highlightText(section.content, searchQuery) }} />
                         </p>
-                        <div className="space-y-3">
+                        <div className="space-y-2">
                           {section.details.map((detail, index) => (
-                            <div key={index} className="text-gray-700 leading-relaxed text-sm">
+                            <div key={index} className="text-gray-700 leading-relaxed text-xs md:text-sm">
                               <span dangerouslySetInnerHTML={{ __html: highlightText(detail, searchQuery) }} />
                             </div>
                           ))}

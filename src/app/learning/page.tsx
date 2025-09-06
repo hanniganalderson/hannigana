@@ -47,17 +47,16 @@ export default function Exploring() {
       id: 'reading',
       title: 'reading',
       items: [
-        "Clear Thinking by Shane Parrish",
-        "Fluke by Brian Klaas",
-        "Recursion by Blake Crouch"
+        "Project Hail Mary by Andy Weir",
+        "How to Stop Worrying and Start Living by Dale Carnegie"
       ]
     },
     {
       id: 'listening',
       title: 'listening',
       items: [
-        "Modern Wisdom #780 - Tim Ferriss",
-        "Tim Ferriss Show #668 - Derek Sivers"
+        "Modern Wisdom",
+        "Founders"
       ]
     },
     {
@@ -99,7 +98,8 @@ export default function Exploring() {
         "The Algebra of Wealth by Scott Galloway",
         "Zero to One by Peter Thiel",
         "Elon Musk by Ashlee Vance",
-        "Dark Matter by Blake Crouch"
+        "Dark Matter by Blake Crouch",
+        "Recursion by Blake Crouch"
       ]
     }
   ];
@@ -127,10 +127,10 @@ export default function Exploring() {
       
       <div className="flex flex-col gap-4 md:gap-6 lg:gap-8">
         <div className="text-center">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold tracking-tight text-gray-900 mb-2">
+          <h1 className="text-lg md:text-xl font-medium text-gray-900 mb-2">
             learning
           </h1>
-          <div className="w-16 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto"></div>
+          <div className="w-12 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto"></div>
         </div>
 
         {/* Search Bar */}
@@ -156,9 +156,9 @@ export default function Exploring() {
             >
               <button
                 onClick={() => toggleSection(section.id)}
-                className="w-full px-6 md:px-8 py-5 md:py-6 text-left flex items-center justify-between hover:bg-gray-50/30 transition-all duration-300 border-b border-gray-50"
+                className="w-full px-4 md:px-4 py-4 md:py-3 text-left flex items-center justify-between hover:bg-gray-50/30 transition-all duration-300 border-b border-gray-50"
               >
-                <h2 className="text-lg md:text-xl font-medium text-gray-800 group-hover:text-gray-900 transition-colors">
+                <h2 className="text-sm md:text-base font-medium text-gray-800 group-hover:text-gray-900 transition-colors">
                   {expandedSections.includes(section.id) ? (
                     <span dangerouslySetInnerHTML={{ __html: highlightText(section.title, searchQuery) }} />
                   ) : (
@@ -173,11 +173,11 @@ export default function Exploring() {
               </button>
               
               {expandedSections.includes(section.id) && (
-                <div className="px-6 md:px-8 py-6 md:py-8 bg-gray-50/30">
-                  <div className="text-gray-700 leading-relaxed text-sm md:text-base space-y-3">
+                <div className="px-4 md:px-4 py-4 md:py-6 bg-gray-50/30">
+                  <div className="text-gray-700 leading-relaxed text-xs md:text-sm space-y-2">
                     {section.items.map((item, index) => (
                       <div key={index} className="flex items-start gap-4 group/item">
-                        <span className="text-purple-500 font-medium text-sm mt-0.5 flex-shrink-0">
+                        <span className="text-purple-500 font-medium text-xs mt-0.5 flex-shrink-0">
                           {String(index + 1).padStart(2, '0')}
                         </span>
                         <span 

@@ -51,7 +51,7 @@ export default function FavoriteIdeas() {
       content: [
         '• Optimize for fulfillment. Spending money only to die with it means you traded years of life for dollars you never used.',
         '• Memory dividends. An experience in your 20s or 30s keeps paying you back every time you recall it. Health and mobility decline, so front-load your life.',
-        '• Time buckets. Divide life into 5–10 year windows. Place the right experiences in the right stage so you don\'t miss chances that close with age.',
+        '• Time buckets. Divide life into 5-10 year windows. Place the right experiences in the right stage so you don\'t miss chances that close with age.',
         '• Give while it matters. A dollar to a 20-year-old changes more than the same dollar at 50. Give to kids or causes when the impact is highest.',
         '• Use insurance, not oversaving. Transfer risk so you can spend freely on living well now.',
         '• Don\'t maximize net worth, maximize net fulfillment. The real scorecard is how well you convert money into meaningful life.',
@@ -69,7 +69,7 @@ export default function FavoriteIdeas() {
       id: 'compounding-knowledge',
       title: 'curated knowledge (shane parrish)',
       content: [
-        '• Small decisions add up. What you read, who you talk to, how you spend an evening—these compound into who you become.',
+        '• Small decisions add up. What you read, who you talk to, how you spend an evening - these compound into who you become.',
         '• We live in the age of curation. Thousands of years of wisdom are compressed into books, podcasts, and essays.',
         '• Knowledge sticks. The ideas you consume shape your judgment and habits. They don\'t stay on the page.',
         '• Modern language makes wisdom usable. Old truths are rewritten to be clearer and easier to apply.',
@@ -221,9 +221,9 @@ export default function FavoriteIdeas() {
   );
 
   return (
-    <div className="container mx-auto max-w-2xl px-4 py-8 md:py-12 lg:py-20">
+    <div className="container mx-auto max-w-2xl px-4 py-6 md:py-8 lg:py-12">
       {/* Go Back Button */}
-      <div className="mb-6 md:mb-8">
+      <div className="mb-4 md:mb-6">
         <Link
           href="/"
           className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm md:text-base"
@@ -233,16 +233,16 @@ export default function FavoriteIdeas() {
         </Link>
       </div>
       
-      <div className="flex flex-col gap-6 md:gap-8">
+      <div className="flex flex-col gap-4 md:gap-6 lg:gap-8">
         <div className="text-center">
-          <h1 className="text-3xl md:text-4xl font-serif font-bold tracking-tight text-gray-900 mb-2">
+          <h1 className="text-lg md:text-xl font-medium text-gray-900 mb-2">
             favorite ideas
           </h1>
-          <div className="w-16 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+          <div className="w-12 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto"></div>
         </div>
 
         {/* Search Bar */}
-        <div className="mb-6">
+        <div className="mb-4 md:mb-6">
           <div className="relative max-w-md mx-auto px-4 md:px-0">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 md:w-5 md:h-5" />
             <input
@@ -255,12 +255,12 @@ export default function FavoriteIdeas() {
           </div>
         </div>
         
-        <article className="space-y-4 md:space-y-6">
+        <article className="space-y-4 md:space-y-5">
           {filteredSections.map((section) => (
             <div key={section.id} className="group cursor-pointer" onClick={() => toggleSection(section.id)}>
-              <div className="flex items-center justify-between py-4 md:py-3 px-4 md:px-4 border-b border-gray-100 hover:border-gray-200 transition-colors duration-200 min-h-[60px] md:min-h-0">
+              <div className="flex items-center justify-between py-4 md:py-3 px-4 md:px-4 border-b border-gray-100 hover:border-gray-200 transition-colors duration-200">
                 <h2 
-                  className="text-base md:text-lg font-medium text-gray-900 group-hover:text-purple-700 transition-colors duration-200 pr-4"
+                  className="text-sm md:text-base font-medium text-gray-900 group-hover:text-purple-700 transition-colors duration-200 pr-4"
                   dangerouslySetInnerHTML={{ 
                     __html: highlightText(section.title, searchQuery) 
                   }}
@@ -273,9 +273,9 @@ export default function FavoriteIdeas() {
               </div>
               
               {expandedSections.includes(section.id) && (
-                <div className="px-4 md:px-4 py-4 md:py-6 bg-gray-50/50 animate-in slide-in-from-top-2 duration-300">
+                <div className="px-4 md:px-4 py-4 md:py-6 bg-gray-50/30">
                   {Array.isArray(section.content) ? (
-                    <div className="space-y-4 text-gray-600 text-sm leading-relaxed">
+                    <div className="space-y-3 text-gray-600 text-xs md:text-sm leading-relaxed">
                       {section.content.map((item, index) => (
                         <div 
                           key={index}
@@ -287,14 +287,14 @@ export default function FavoriteIdeas() {
                     </div>
                   ) : (
                     <p 
-                      className="text-gray-600 mb-4 md:mb-6 leading-relaxed text-sm"
+                      className="text-gray-600 mb-4 md:mb-6 leading-relaxed text-xs md:text-sm"
                       dangerouslySetInnerHTML={{ 
                         __html: highlightText(section.content, searchQuery) 
                       }}
                     />
                   )}
                   {section.link && (
-                    <p className="text-gray-600 mb-4 md:mb-6 leading-relaxed text-sm">
+                    <p className="text-gray-600 mb-4 md:mb-6 leading-relaxed text-xs md:text-sm">
                       See <a href={section.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 transition-colors duration-200">{section.linkText}</a>.
                     </p>
                   )}

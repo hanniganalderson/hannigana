@@ -51,7 +51,7 @@ export default function FavoriteIdeas() {
       content: [
         '• Optimize for fulfillment. Spending money only to die with it means you traded years of life for dollars you never used.',
         '• Memory dividends. An experience in your 20s or 30s keeps paying you back every time you recall it. Health and mobility decline, so front-load your life.',
-        '• Time buckets. Divide life into 5–10 year windows. Place the right experiences in the right stage so you don\'t miss chances that close with age.',
+        '• Time buckets. Divide life into 5-10 year windows. Place the right experiences in the right stage so you don\'t miss chances that close with age.',
         '• Give while it matters. A dollar to a 20-year-old changes more than the same dollar at 50. Give to kids or causes when the impact is highest.',
         '• Use insurance, not oversaving. Transfer risk so you can spend freely on living well now.',
         '• Don\'t maximize net worth, maximize net fulfillment. The real scorecard is how well you convert money into meaningful life.',
@@ -64,13 +64,13 @@ export default function FavoriteIdeas() {
       id: 'compounding-knowledge',
       title: 'curated knowledge (shane parrish)',
       content: [
-        '• Small decisions add up. What you read, who you talk to, how you spend an evening—these compound into who you become.',
+        '• Small decisions add up. What you read, who you talk to, how you spend an evening - these compound into who you become.',
         '• We live in the age of curation. Thousands of years of wisdom are compressed into books, podcasts, and essays.',
         '• Knowledge sticks. The ideas you consume shape your judgment and habits. They don\'t stay on the page.',
         '• Modern language makes wisdom usable. Old truths are rewritten to be clearer and easier to apply.',
         '• The edge comes from choosing what you consume and letting it compound.',
         '• Mental models are thinking tools. Collect them, connect them, and use them until they become instinct.',
-        '• The foundational nine: map ≠ territory, circle of competence, first principles, thought experiments, second-order thinking, probabilistic thinking, inversion, Occam\'s razor, Hanlon\'s razor.',
+        '• The foundational nine: map not equal territory, circle of competence, first principles, thought experiments, second-order thinking, probabilistic thinking, inversion, Occam\'s razor, Hanlon\'s razor.',
         '• Better decisions are leverage. One right choice can be worth years of effort.',
         '• Clarity beats complexity. Simple rules, applied consistently, win.',
         '• Avoid stupidity. Cutting mistakes is often the fastest way to improve.',
@@ -103,56 +103,56 @@ export default function FavoriteIdeas() {
       id: 'david-perell',
       title: 'david perell (50 best ideas, condensed)',
       content: [
-        '1. Inversion. Avoiding stupidity is easier than being brilliant. Ask what hurts your company and stop it.',
-        '2. Doublespeak. People say the opposite of what they mean. "War is peace. Freedom is slavery. Ignorance is strength."',
-        '3. Theory of Constraints. A system is only as strong as its weakest link. Fix the bottleneck.',
-        '4. Preference Falsification. People hide their real opinions in public and share them in private.',
-        '5. Faustian Bargain. Don\'t win the battle and lose the war. Some trades cost more than they give.',
-        '6. Mimetic Desire. We copy each other\'s wants. Advertising runs on this.',
-        '7. Mimetic Conflict. Similar people fight hardest. That\'s why family feuds and civil wars get ugly.',
-        '8. Talent vs Genius. Talent hits targets others can hit. Genius sees targets others can\'t.',
-        '9. Competition is for Losers. Don\'t copy. Solve problems no one else will.',
-        '10. Secrets in Plain Sight. The best ideas are obvious but overlooked.',
-        '11. Never-Ending Now. Social media traps us in endless present, blind to history.',
-        '12. Demand Curves. Raise price, fewer buyers. Lower price, more buyers.',
-        '13. Look for Nonsense. When the world doesn\'t make sense, your model is wrong. That\'s opportunity.',
-        '14. Wisdom of Paradox. Opposites can both be true. Explore paradoxes.',
-        '15. Shitty Click-Through Rates. Marketing tactics decay. What worked yesterday won\'t tomorrow.',
-        '16. Russell Conjugation. Word choice twists meaning. "Estate tax" vs "death tax."',
-        '17. Opportunity Cost. Doing one thing means not doing another. Every choice is a trade.',
-        '18. Overton Window. Control debate by setting what\'s "acceptable." Everything outside is ignored.',
-        '19. Planck\'s Principle. Science advances one funeral at a time. Old ideas die with old scientists.',
-        '20. Bike-Shed Effect. People argue over trivial stuff, ignore hard problems.',
-        '21. Table Selection. Don\'t fight the best. Pick easier tables and execute well.',
-        '22. Goodhart\'s Law. When a measure becomes a target, it stops working.',
-        '23. Gall\'s Law. Complex systems evolve from simple ones. You can\'t design complexity from scratch.',
-        '24. Hock Principle. Simple rules create smart behavior. Complex rules create stupid behavior.',
-        '25. Parkinson\'s Law. Work expands to fill the time allowed. Deadlines matter.',
-        '26. Second Law of Thermodynamics. The world trends toward disorder. Entropy always rises.',
-        '27. Paradox of Specificity. Narrow focus creates more opportunities in the internet age.',
-        '28. Emergence. Interactions create new, unpredictable forms. The whole is more than parts.',
-        '29. Occam\'s Razor. The simplest explanation is usually true.',
-        '30. Hickam\'s Dictum. Sometimes problems have many causes, not one.',
-        '31. Hormesis. Low doses help, high doses harm. Stress a little, not too much.',
-        '32. Robustness Principle. Hold yourself to higher standards than you hold others.',
-        '33. Legibility. We manage what we can measure. But not everything that matters can be measured.',
-        '34. Horseshoe Theory. Extremes resemble each other more than the center.',
-        '35. Availability Cascade. Ideas spread because they\'re popular, not because they\'re true.',
-        '36. Creativity at the Edge. Big ideas start on the margins, not the main stage.',
-        '37. Copernican Principle. Earth and humans are not special. We\'re small in time and space.',
-        '38. Personal Monopoly. Be the only person who does what you do. Own your niche.',
-        '39. Paradox of Consensus. Total agreement can signal error, not truth.',
-        '40. Penny Problem. Even tiny costs change behavior. Spam would vanish if emails cost $0.001.',
-        '41. Invisible Hand. Prices signal supply and demand. Markets coordinate knowledge.',
-        '42. Base Rate. Know the average odds. Restaurants fail more than succeed.',
-        '43. Circle of Competence. Know what you know. Stay within your limits.',
-        '44. Convexity. Look for bets with big upside and small downside.',
-        '45. Go-For-It Window. Social norms lag behind tech. Gaps create short-lived opportunities.',
-        '46. Via Negativa. Subtract to improve. What you avoid matters more than what you add.',
-        '47. Medium is the Message. The medium shapes society more than the content.',
-        '48. Resource Curse. Countries with lots of natural resources often grow slower.',
-        '49. Paradox of Abundance. More info lowers the average quality but raises the best.',
-        '50. Map is Not the Territory. All models are wrong, some are useful. Pay attention to what maps leave out.',
+        'Inversion. Avoiding stupidity is easier than being brilliant. Ask what hurts your company and stop it.',
+        'Doublespeak. People say the opposite of what they mean. "War is peace. Freedom is slavery. Ignorance is strength."',
+        'Theory of Constraints. A system is only as strong as its weakest link. Fix the bottleneck.',
+        'Preference Falsification. People hide their real opinions in public and share them in private.',
+        'Faustian Bargain. Don\'t win the battle and lose the war. Some trades cost more than they give.',
+        'Mimetic Desire. We copy each other\'s wants. Advertising runs on this.',
+        'Mimetic Conflict. Similar people fight hardest. That\'s why family feuds and civil wars get ugly.',
+        'Talent vs Genius. Talent hits targets others can hit. Genius sees targets others can\'t.',
+        'Competition is for Losers. Don\'t copy. Solve problems no one else will.',
+        'Secrets in Plain Sight. The best ideas are obvious but overlooked.',
+        'Never-Ending Now. Social media traps us in endless present, blind to history.',
+        'Demand Curves. Raise price, fewer buyers. Lower price, more buyers.',
+        'Look for Nonsense. When the world doesn\'t make sense, your model is wrong. That\'s opportunity.',
+        'Wisdom of Paradox. Opposites can both be true. Explore paradoxes.',
+        'Shitty Click-Through Rates. Marketing tactics decay. What worked yesterday won\'t tomorrow.',
+        'Russell Conjugation. Word choice twists meaning. "Estate tax" vs "death tax."',
+        'Opportunity Cost. Doing one thing means not doing another. Every choice is a trade.',
+        'Overton Window. Control debate by setting what\'s "acceptable." Everything outside is ignored.',
+        'Planck\'s Principle. Science advances one funeral at a time. Old ideas die with old scientists.',
+        'Bike-Shed Effect. People argue over trivial stuff, ignore hard problems.',
+        'Table Selection. Don\'t fight the best. Pick easier tables and execute well.',
+        'Goodhart\'s Law. When a measure becomes a target, it stops working.',
+        'Gall\'s Law. Complex systems evolve from simple ones. You can\'t design complexity from scratch.',
+        'Hock Principle. Simple rules create smart behavior. Complex rules create stupid behavior.',
+        'Parkinson\'s Law. Work expands to fill the time allowed. Deadlines matter.',
+        'Second Law of Thermodynamics. The world trends toward disorder. Entropy always rises.',
+        'Paradox of Specificity. Narrow focus creates more opportunities in the internet age.',
+        'Emergence. Interactions create new, unpredictable forms. The whole is more than parts.',
+        'Occam\'s Razor. The simplest explanation is usually true.',
+        'Hickam\'s Dictum. Sometimes problems have many causes, not one.',
+        'Hormesis. Low doses help, high doses harm. Stress a little, not too much.',
+        'Robustness Principle. Hold yourself to higher standards than you hold others.',
+        'Legibility. We manage what we can measure. But not everything that matters can be measured.',
+        'Horseshoe Theory. Extremes resemble each other more than the center.',
+        'Availability Cascade. Ideas spread because they\'re popular, not because they\'re true.',
+        'Creativity at the Edge. Big ideas start on the margins, not the main stage.',
+        'Copernican Principle. Earth and humans are not special. We\'re small in time and space.',
+        'Personal Monopoly. Be the only person who does what you do. Own your niche.',
+        'Paradox of Consensus. Total agreement can signal error, not truth.',
+        'Penny Problem. Even tiny costs change behavior. Spam would vanish if emails cost $0.001.',
+        'Invisible Hand. Prices signal supply and demand. Markets coordinate knowledge.',
+        'Base Rate. Know the average odds. Restaurants fail more than succeed.',
+        'Circle of Competence. Know what you know. Stay within your limits.',
+        'Convexity. Look for bets with big upside and small downside.',
+        'Go-For-It Window. Social norms lag behind tech. Gaps create short-lived opportunities.',
+        'Via Negativa. Subtract to improve. What you avoid matters more than what you add.',
+        'Medium is the Message. The medium shapes society more than the content.',
+        'Resource Curse. Countries with lots of natural resources often grow slower.',
+        'Paradox of Abundance. More info lowers the average quality but raises the best.',
+        'Map is Not the Territory. All models are wrong, some are useful. Pay attention to what maps leave out.',
         '',
         'Baker\'s Dozen. Delight people with an unexpected bonus. Extra bagel, free chocolate, surprise gift.'
       ],
@@ -250,10 +250,10 @@ export default function FavoriteIdeas() {
       
       <div className="flex flex-col gap-4 md:gap-6 lg:gap-8">
         <div className="text-center">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold tracking-tight text-gray-900 mb-2">
+          <h1 className="text-lg md:text-xl font-medium text-gray-900 mb-2">
             favorite ideas
           </h1>
-          <div className="w-16 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto"></div>
+          <div className="w-12 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto"></div>
         </div>
 
         {/* Search Bar */}
@@ -281,7 +281,7 @@ export default function FavoriteIdeas() {
                 onClick={() => toggleSection(section.id)}
                 className="w-full px-6 md:px-8 py-4 md:py-5 text-left flex items-center justify-between hover:bg-gray-50/30 transition-all duration-300 border-b border-gray-50"
               >
-                <h2 className="text-lg md:text-xl font-medium text-gray-800 group-hover:text-gray-900 transition-colors">
+                <h2 className="text-sm md:text-base font-medium text-gray-800 group-hover:text-gray-900 transition-colors">
                   {expandedSections.includes(section.id) ? (
                     <span dangerouslySetInnerHTML={{ __html: highlightText(section.title, searchQuery) }} />
                   ) : (
@@ -297,7 +297,7 @@ export default function FavoriteIdeas() {
               
               {expandedSections.includes(section.id) && (
                 <div className="px-6 md:px-8 py-6 md:py-8 bg-gray-50/30">
-                  <div className="text-gray-700 leading-relaxed text-sm md:text-base space-y-4">
+                  <div className="text-gray-700 leading-relaxed text-xs md:text-sm space-y-3">
                     {Array.isArray(section.content) ? (
                       section.content.map((item, index) => {
                         // Check if this section should use numbered format
@@ -306,7 +306,7 @@ export default function FavoriteIdeas() {
                         if (useNumberedFormat) {
                           return (
                             <div key={index} className="flex items-start gap-4 group/item">
-                              <span className="text-purple-500 font-medium text-sm mt-0.5 flex-shrink-0">
+                              <span className="text-purple-500 font-medium text-xs mt-0.5 flex-shrink-0">
                                 {String(index + 1).padStart(2, '0')}
                               </span>
                               <span 
